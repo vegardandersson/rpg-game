@@ -1,10 +1,17 @@
 package org.example.game_elements;
 
-public class Wizard extends Hero {
+import org.example.game_elements.types.ArmorType;
+import org.example.game_elements.types.WeaponType;
 
+public class Wizard extends Hero {
 
     public Wizard(String name){
         super(name);
+
+        // Constraints and prerequisites specific to the Wizard class
+        this.validArmorTypes = new ArmorType[]{ArmorType.CLOTH};
+        this.validWeaponTypes = new WeaponType[]{WeaponType.STAFF, WeaponType.WAND};
+        this.levelAttribute = new HeroAttribute(1, 1, 8);
     }
 
     public void levelUp(){
