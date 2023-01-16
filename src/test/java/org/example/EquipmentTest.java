@@ -4,7 +4,6 @@ import org.example.game_elements.*;
 import org.example.game_elements.types.ArmorType;
 import org.example.game_elements.types.Slot;
 import org.example.game_elements.types.WeaponType;
-import org.example.util.InvalidWeaponException;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -28,8 +27,14 @@ public class EquipmentTest {
         this.hammer = new Weapon("hammer", 1, null, 7, WeaponType.HAMMER);
         this.hammerTooHighLevel = new Weapon("hammer", 6, null, 7, WeaponType.HAMMER);
 
-        this.plateHelmet = new Armor("plateHelmet", 1, null, 7, Slot.HEAD, ArmorType.PLATE);
-        this.plateHelmetTooHighLevel = new Armor("plateHelmet", 3, null, 7, Slot.HEAD, ArmorType.PLATE);
+        this.plateHelmet = new Armor(
+                "plateHelmet", 1, null, 7,
+                new HeroAttribute(2, 1, 1),
+                Slot.HEAD, ArmorType.PLATE);
+        this.plateHelmetTooHighLevel = new Armor(
+                "plateHelmet", 3, null, 7,
+                new HeroAttribute(4, 2, 1),
+                Slot.HEAD, ArmorType.PLATE);
     }
 
     @Test

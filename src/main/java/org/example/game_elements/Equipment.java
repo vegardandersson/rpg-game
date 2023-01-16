@@ -34,4 +34,6 @@ public abstract class Equipment {
     public void setEligibleSlot(Slot eligibleSlot) {
         this.eligibleSlot = eligibleSlot;
     }
+
+    public abstract HeroAttribute getBonusAttributes();
 }

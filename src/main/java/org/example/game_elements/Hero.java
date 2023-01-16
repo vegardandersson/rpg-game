@@ -6,9 +6,7 @@ import org.example.game_elements.types.WeaponType;
 import org.example.util.InvalidArmorException;
 import org.example.util.InvalidWeaponException;
 
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 public abstract class Hero {
 
@@ -57,9 +55,20 @@ public abstract class Hero {
         return equipment;
     }
 
+    public HeroAttribute calculateTotalAttributes(){
+        List<HeroAttribute> allAttributeSources = new ArrayList<>();
+        allAttributeSources.add(this.levelAttribute);
+        for(Slot slot : Slot.values()){
+            if(slot != Slot.WEAPON && this.equipment.get(slot) != null){
+                allAttributeSources.add(this.equipment.get(slot).getBonusAttributes());
+            }
+        }
+        return HeroAttribute.getSumOfAttributes(allAttributeSources);
+    }
+
     public abstract void levelUp();
 
-    public abstract int calculateDamage();
+    public abstract float calculateDamage();
 
     public void displayHero(){
 

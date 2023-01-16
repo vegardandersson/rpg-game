@@ -6,7 +6,7 @@ import org.example.game_elements.types.WeaponType;
 public class Weapon extends Equipment {
 
     private int damage;
-    private WeaponType weaponType;
+    private final WeaponType weaponType;
 
     public Weapon(String name, int level, HeroAttribute attributes, int damage, WeaponType weaponType){
         super(name, level, attributes);
@@ -26,4 +26,6 @@ public class Weapon extends Equipment {
     public WeaponType getWeaponType(){
         return this.weaponType;
     }
+
+    public HeroAttribute getBonusAttributes(){return null;}
 }

@@ -20,7 +20,7 @@ public class Ranger extends Hero {
                 new HeroAttribute(1, 5, 1));
     }
 
-    public int calculateDamage(){
+    public float calculateDamage(){
         return 0;
     }
 }

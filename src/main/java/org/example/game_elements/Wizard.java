@@ -20,7 +20,7 @@ public class Wizard extends Hero {
                 new HeroAttribute(1, 1, 5));
     }
 
-    public int calculateDamage(){
+    public float calculateDamage(){
         return 0;
     }
 }

@@ -1,5 +1,7 @@
 package org.example.game_elements;
 
+import java.util.List;
+
 public class HeroAttribute {
 
     private int strength;
@@ -35,7 +37,7 @@ public class HeroAttribute {
         this.intelligence += attributes.getIntelligence();
     }
 
-    public static HeroAttribute getSumOfAttributes(HeroAttribute[] attributes){
+    public static HeroAttribute getSumOfAttributes(List<HeroAttribute> attributes){
         HeroAttribute sum = new HeroAttribute();
         for (HeroAttribute attribute : attributes) {
             sum.increaseAttributes(attribute);
