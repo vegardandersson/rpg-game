@@ -4,19 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="db7ad628-a34e-4f92-8b5b-ca25a9dc3202" name="Changes" comment="tests and implementation of leveling up">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/util/InvalidArmorException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/util/InvalidWeaponException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/EquipmentTest.java" afterDir="false" />
+    <list default="true" id="db7ad628-a34e-4f92-8b5b-ca25a9dc3202" name="Changes" comment="implemented Equipment, Armor and Weapon classes, Exception classes for invalid armor and weapon as well as functions for equipping equipment. Also implemented tests for these classes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/game_elements/Armor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/game_elements/Armor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/game_elements/Equipment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/game_elements/Equipment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/game_elements/Hero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/game_elements/Hero.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/game_elements/Ranger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/game_elements/Ranger.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/game_elements/Rogue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/game_elements/Rogue.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/game_elements/Warrior.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/game_elements/Warrior.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/game_elements/Weapon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/game_elements/Weapon.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/game_elements/Wizard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/game_elements/Wizard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/EquipmentTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/EquipmentTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/example/HeroTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/HeroTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -114,8 +104,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.EquipmentTest" />
-        <item itemvalue="JUnit.EquipmentTest.EquipPlateHelmetWrongTypeArmor_Ranger_ShouldThrowException_And_NotBeAddedToHeroEquipment" />
         <item itemvalue="JUnit.HeroTest" />
+        <item itemvalue="JUnit.EquipmentTest.EquipPlateHelmetWrongTypeArmor_Ranger_ShouldThrowException_And_NotBeAddedToHeroEquipment" />
       </list>
     </recent_temporary>
   </component>
@@ -129,7 +119,7 @@
       <updated>1673618201702</updated>
       <workItem from="1673618202857" duration="1982000" />
       <workItem from="1673853717463" duration="32000" />
-      <workItem from="1673859646875" duration="15707000" />
+      <workItem from="1673859646875" duration="16236000" />
     </task>
     <task id="LOCAL−00001" summary="initialization of project rpg-game">
       <created>1673618568597</created>
@@ -185,7 +175,13 @@
       <option name="presentableId" value="LOCAL−00009" />
       <updated>1673870495596</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL−00010" summary="implemented Equipment, Armor and Weapon classes, Exception classes for invalid armor and weapon as well as functions for equipping equipment. Also implemented tests for these classes">
+      <created>1673877047323</created>
+      <option name="number" value="LOCAL−00010" />
+      <option name="presentableId" value="LOCAL−00010" />
+      <updated>1673877047323</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -197,6 +193,7 @@
     <MESSAGE value="set up first test class and test method" />
     <MESSAGE value="added some specifics for the different classes" />
     <MESSAGE value="tests and implementation of leveling up" />
-    <option name="LAST_COMMIT_MESSAGE" value="tests and implementation of leveling up" />
+    <MESSAGE value="implemented Equipment, Armor and Weapon classes, Exception classes for invalid armor and weapon as well as functions for equipping equipment. Also implemented tests for these classes" />
+    <option name="LAST_COMMIT_MESSAGE" value="implemented Equipment, Armor and Weapon classes, Exception classes for invalid armor and weapon as well as functions for equipping equipment. Also implemented tests for these classes" />
   </component>
 </project>

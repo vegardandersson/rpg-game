@@ -11,14 +11,14 @@ import org.junit.Test;
 
 public class EquipmentTest {
 
-    private Warrior warrior;
-    private Ranger ranger;
+    private Hero warrior;
+    private Hero ranger;
 
-    private Weapon hammer;
-    private Weapon hammerTooHighLevel;
+    private Equipment hammer;
+    private Equipment hammerTooHighLevel;
 
-    private Armor plateHelmet;
-    private Armor plateHelmetTooHighLevel;
+    private Equipment plateHelmet;
+    private Equipment plateHelmetTooHighLevel;
 
     @Before
     public void instantiate(){

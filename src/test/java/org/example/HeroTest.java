@@ -7,10 +7,10 @@ import org.junit.Test;
 
 public class HeroTest {
 
-    private Warrior warrior;
-    private Wizard wizard;
-    private Ranger ranger;
-    private Rogue rogue;
+    private Hero warrior;
+    private Hero wizard;
+    private Hero ranger;
+    private Hero rogue;
 
     @Before
     public void InstantiateHero(){
