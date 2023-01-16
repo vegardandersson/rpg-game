@@ -19,4 +19,8 @@ public class Wizard extends Hero {
         this.levelAttribute.increaseAttributes(
                 new HeroAttribute(1, 1, 5));
     }
+
+    public int calculateDamage(){
+        return 0;
+    }
 }

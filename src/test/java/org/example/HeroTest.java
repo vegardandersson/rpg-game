@@ -48,4 +48,14 @@ public class HeroTest {
         Assert.assertEquals(rogueLevelAttributeAtLevelThree.getIntelligence(), this.rogue.getLevelAttribute().getIntelligence());
     }
 
+    @Test
+    public void DamageCalculation_ShouldBeCorrect_BasedOnDamagingAttribute_And_DefaultDamageWhenNoWeaponEquipped(){
+
+    }
+
+    @Test
+    public void DamageCalculation_ShouldBeCorrect_BasedOnDamagingAttribute_And_EquippedWeapon(){
+
+    }
+
 }

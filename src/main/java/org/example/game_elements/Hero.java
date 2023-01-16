@@ -3,7 +3,10 @@ package org.example.game_elements;
 import org.example.game_elements.types.ArmorType;
 import org.example.game_elements.types.Slot;
 import org.example.game_elements.types.WeaponType;
+import org.example.util.InvalidArmorException;
+import org.example.util.InvalidWeaponException;
 
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -56,16 +59,38 @@ public abstract class Hero {
 
     public abstract void levelUp();
 
-    public void calculateDamage(){
-
-    }
+    public abstract int calculateDamage();
 
     public void displayHero(){
 
     }
 
     public void equipItem(Equipment item) throws Exception {
+        if(item.getEligibleSlot() == Slot.WEAPON){
+            this.equipWeapon((Weapon) item);
+        }else{
+            this.equipArmor((Armor) item);
+        }
+    }
 
+    private void equipWeapon(Weapon item) throws Exception {
+        if(item.getRequiredLevel() > this.heroLevel){
+            throw new InvalidWeaponException("Hero level too low, failed to equip");
+        }
+        if(!Arrays.asList(this.validWeaponTypes).contains(item.getWeaponType())){
+            throw new InvalidWeaponException("Hero is ineligible to use this type of weapon, failed to equip");
+        }
+        this.equipment.put(item.getEligibleSlot(), item);
+    }
+
+    private void equipArmor(Armor item) throws Exception {
+        if(item.getRequiredLevel() > this.heroLevel){
+            throw new InvalidWeaponException("Hero level too low, failed to equip");
+        }
+        if(!Arrays.asList(this.validArmorTypes).contains(item.getArmorType())){
+            throw new InvalidWeaponException("Hero is ineligible to use this type of armor, failed to equip");
+        }
+        this.equipment.put(item.getEligibleSlot(), item);
     }
 
 }

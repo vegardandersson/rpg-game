@@ -19,4 +19,8 @@ public class Rogue extends Hero {
         this.levelAttribute.increaseAttributes(
                 new HeroAttribute(1, 4, 1));
     }
+
+    public int calculateDamage(){
+        return 0;
+    }
 }

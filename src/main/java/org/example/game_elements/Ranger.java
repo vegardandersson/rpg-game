@@ -19,4 +19,8 @@ public class Ranger extends Hero {
         this.levelAttribute.increaseAttributes(
                 new HeroAttribute(1, 5, 1));
     }
+
+    public int calculateDamage(){
+        return 0;
+    }
 }

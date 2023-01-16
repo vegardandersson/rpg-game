@@ -19,4 +19,8 @@ public class Warrior extends Hero {
         this.levelAttribute.increaseAttributes(
                 new HeroAttribute(3, 2, 1));
     }
+
+    public int calculateDamage(){
+        return 0;
+    }
 }

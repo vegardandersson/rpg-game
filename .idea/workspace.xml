@@ -4,13 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="db7ad628-a34e-4f92-8b5b-ca25a9dc3202" name="Changes" comment="added some specifics for the different classes">
+    <list default="true" id="db7ad628-a34e-4f92-8b5b-ca25a9dc3202" name="Changes" comment="tests and implementation of leveling up">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/util/InvalidArmorException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/util/InvalidWeaponException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/EquipmentTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/game_elements/Armor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/game_elements/Armor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/game_elements/Equipment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/game_elements/Equipment.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/game_elements/Hero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/game_elements/Hero.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/game_elements/HeroAttribute.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/game_elements/HeroAttribute.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/game_elements/Ranger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/game_elements/Ranger.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/game_elements/Rogue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/game_elements/Rogue.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/game_elements/Warrior.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/game_elements/Warrior.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/game_elements/Weapon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/game_elements/Weapon.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/game_elements/Wizard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/game_elements/Wizard.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/example/HeroTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/HeroTest.java" afterDir="false" />
     </list>
@@ -59,7 +64,38 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.EquipmentTest">
+    <configuration name="EquipmentTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="rpg-game" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example" />
+      <option name="MAIN_CLASS_NAME" value="org.example.EquipmentTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EquipmentTest.EquipPlateHelmetWrongTypeArmor_Ranger_ShouldThrowException_And_NotBeAddedToHeroEquipment" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="rpg-game" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example" />
+      <option name="MAIN_CLASS_NAME" value="org.example.EquipmentTest" />
+      <option name="METHOD_NAME" value="EquipPlateHelmetWrongTypeArmor_Ranger_ShouldThrowException_And_NotBeAddedToHeroEquipment" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="HeroTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="rpg-game" />
       <extension name="coverage">
@@ -77,6 +113,8 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.EquipmentTest" />
+        <item itemvalue="JUnit.EquipmentTest.EquipPlateHelmetWrongTypeArmor_Ranger_ShouldThrowException_And_NotBeAddedToHeroEquipment" />
         <item itemvalue="JUnit.HeroTest" />
       </list>
     </recent_temporary>
@@ -91,7 +129,7 @@
       <updated>1673618201702</updated>
       <workItem from="1673618202857" duration="1982000" />
       <workItem from="1673853717463" duration="32000" />
-      <workItem from="1673859646875" duration="9211000" />
+      <workItem from="1673859646875" duration="15707000" />
     </task>
     <task id="LOCAL−00001" summary="initialization of project rpg-game">
       <created>1673618568597</created>
@@ -141,7 +179,13 @@
       <option name="presentableId" value="LOCAL−00008" />
       <updated>1673866387075</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL−00009" summary="tests and implementation of leveling up">
+      <created>1673870495596</created>
+      <option name="number" value="LOCAL−00009" />
+      <option name="presentableId" value="LOCAL−00009" />
+      <updated>1673870495596</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -152,6 +196,7 @@
     <MESSAGE value="initialization of basic class structure" />
     <MESSAGE value="set up first test class and test method" />
     <MESSAGE value="added some specifics for the different classes" />
-    <option name="LAST_COMMIT_MESSAGE" value="added some specifics for the different classes" />
+    <MESSAGE value="tests and implementation of leveling up" />
+    <option name="LAST_COMMIT_MESSAGE" value="tests and implementation of leveling up" />
   </component>
 </project>
