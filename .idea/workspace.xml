@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="db7ad628-a34e-4f92-8b5b-ca25a9dc3202" name="Changes" comment="initialization of basic class structure">
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/HeroTest.java" afterDir="false" />
+    <list default="true" id="db7ad628-a34e-4f92-8b5b-ca25a9dc3202" name="Changes" comment="set up first test class and test method">
+      <change beforePath="$PROJECT_DIR$/.github/workflows/maven.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/maven.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,7 +85,7 @@
       <updated>1673618201702</updated>
       <workItem from="1673618202857" duration="1982000" />
       <workItem from="1673853717463" duration="32000" />
-      <workItem from="1673859646875" duration="5032000" />
+      <workItem from="1673859646875" duration="5365000" />
     </task>
     <task id="LOCAL−00001" summary="initialization of project rpg-game">
       <created>1673618568597</created>
@@ -118,7 +117,13 @@
       <option name="presentableId" value="LOCAL−00005" />
       <updated>1673863722648</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL−00006" summary="set up first test class and test method">
+      <created>1673864706576</created>
+      <option name="number" value="LOCAL−00006" />
+      <option name="presentableId" value="LOCAL−00006" />
+      <updated>1673864706576</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -127,6 +132,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="initialization of project rpg-game" />
     <MESSAGE value="initialization of basic class structure" />
-    <option name="LAST_COMMIT_MESSAGE" value="initialization of basic class structure" />
+    <MESSAGE value="set up first test class and test method" />
+    <option name="LAST_COMMIT_MESSAGE" value="set up first test class and test method" />
   </component>
 </project>
