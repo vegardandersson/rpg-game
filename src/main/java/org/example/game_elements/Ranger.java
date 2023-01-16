@@ -15,6 +15,8 @@ public class Ranger extends Hero {
     }
 
     public void levelUp(){
-
+        this.heroLevel += 1;
+        this.levelAttribute.increaseAttributes(
+                new HeroAttribute(1, 5, 1));
     }
 }

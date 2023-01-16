@@ -15,6 +15,8 @@ public class Warrior extends Hero {
     }
 
     public void levelUp(){
-
+        this.heroLevel += 1;
+        this.levelAttribute.increaseAttributes(
+                new HeroAttribute(3, 2, 1));
     }
 }

@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="db7ad628-a34e-4f92-8b5b-ca25a9dc3202" name="Changes" comment="set up first test class and test method">
+    <list default="true" id="db7ad628-a34e-4f92-8b5b-ca25a9dc3202" name="Changes" comment="added some specifics for the different classes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/game_elements/Hero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/game_elements/Hero.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/game_elements/HeroAttribute.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/game_elements/HeroAttribute.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/game_elements/Ranger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/game_elements/Ranger.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/game_elements/Rogue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/game_elements/Rogue.java" afterDir="false" />
@@ -90,7 +91,7 @@
       <updated>1673618201702</updated>
       <workItem from="1673618202857" duration="1982000" />
       <workItem from="1673853717463" duration="32000" />
-      <workItem from="1673859646875" duration="6712000" />
+      <workItem from="1673859646875" duration="9211000" />
     </task>
     <task id="LOCAL−00001" summary="initialization of project rpg-game">
       <created>1673618568597</created>
@@ -134,7 +135,13 @@
       <option name="presentableId" value="LOCAL−00007" />
       <updated>1673865022835</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL−00008" summary="added some specifics for the different classes">
+      <created>1673866387075</created>
+      <option name="number" value="LOCAL−00008" />
+      <option name="presentableId" value="LOCAL−00008" />
+      <updated>1673866387075</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -144,6 +151,7 @@
     <MESSAGE value="initialization of project rpg-game" />
     <MESSAGE value="initialization of basic class structure" />
     <MESSAGE value="set up first test class and test method" />
-    <option name="LAST_COMMIT_MESSAGE" value="set up first test class and test method" />
+    <MESSAGE value="added some specifics for the different classes" />
+    <option name="LAST_COMMIT_MESSAGE" value="added some specifics for the different classes" />
   </component>
 </project>

@@ -15,6 +15,8 @@ public class Wizard extends Hero {
     }
 
     public void levelUp(){
-
+        this.heroLevel += 1;
+        this.levelAttribute.increaseAttributes(
+                new HeroAttribute(1, 1, 5));
     }
 }

@@ -10,7 +10,7 @@ import java.util.Map;
 public abstract class Hero {
 
     private final String heroName;
-    private int heroLevel;
+    public int heroLevel;
     private long exp;
     public HeroAttribute levelAttribute;
     public WeaponType[] validWeaponTypes;
