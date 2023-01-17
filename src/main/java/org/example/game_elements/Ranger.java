@@ -1,6 +1,7 @@
 package org.example.game_elements;
 
 import org.example.game_elements.types.ArmorType;
+import org.example.game_elements.types.Slot;
 import org.example.game_elements.types.WeaponType;
 
 public class Ranger extends Hero {
@@ -21,6 +22,8 @@ public class Ranger extends Hero {
     }
 
     public float calculateDamage(){
-        return 0;
+        Weapon weapon = (Weapon) this.getEquipment().get(Slot.WEAPON);
+        int weaponDamage = weapon != null ? weapon.getDamage() : 1;
+        return weaponDamage*(1 + this.calculateTotalAttributes().getDexterity()/100.0f);
     }
 }

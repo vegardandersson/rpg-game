@@ -4,18 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="db7ad628-a34e-4f92-8b5b-ca25a9dc3202" name="Changes" comment="implemented Equipment, Armor and Weapon classes, Exception classes for invalid armor and weapon as well as functions for equipping equipment. Also implemented tests for these classes">
+    <list default="true" id="db7ad628-a34e-4f92-8b5b-ca25a9dc3202" name="Changes" comment="implemented damage calculation and total attributes calculation with related unit tests">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/game_elements/Armor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/game_elements/Armor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/game_elements/Equipment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/game_elements/Equipment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/game_elements/Hero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/game_elements/Hero.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/game_elements/HeroAttribute.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/game_elements/HeroAttribute.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/game_elements/Ranger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/game_elements/Ranger.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/game_elements/Rogue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/game_elements/Rogue.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/game_elements/Warrior.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/game_elements/Warrior.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/game_elements/Weapon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/game_elements/Weapon.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/game_elements/Wizard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/game_elements/Wizard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/EquipmentTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/EquipmentTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/example/HeroTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/HeroTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -50,19 +43,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/VAnde1/JavaProjects/rpg-game",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="JUnit.HeroTest">
     <configuration name="EquipmentTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="rpg-game" />
@@ -128,7 +122,10 @@
       <updated>1673618201702</updated>
       <workItem from="1673618202857" duration="1982000" />
       <workItem from="1673853717463" duration="32000" />
-      <workItem from="1673859646875" duration="19974000" />
+      <workItem from="1673859646875" duration="20126000" />
+      <workItem from="1673940015490" duration="155000" />
+      <workItem from="1673940440351" duration="28000" />
+      <workItem from="1673945196165" duration="1124000" />
     </task>
     <task id="LOCAL−00001" summary="initialization of project rpg-game">
       <created>1673618568597</created>
@@ -196,7 +193,13 @@
       <option name="presentableId" value="LOCAL−00011" />
       <updated>1673877513016</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL−00012" summary="implemented damage calculation and total attributes calculation with related unit tests">
+      <created>1673881286283</created>
+      <option name="number" value="LOCAL−00012" />
+      <option name="presentableId" value="LOCAL−00012" />
+      <updated>1673881286283</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -209,6 +212,7 @@
     <MESSAGE value="added some specifics for the different classes" />
     <MESSAGE value="tests and implementation of leveling up" />
     <MESSAGE value="implemented Equipment, Armor and Weapon classes, Exception classes for invalid armor and weapon as well as functions for equipping equipment. Also implemented tests for these classes" />
-    <option name="LAST_COMMIT_MESSAGE" value="implemented Equipment, Armor and Weapon classes, Exception classes for invalid armor and weapon as well as functions for equipping equipment. Also implemented tests for these classes" />
+    <MESSAGE value="implemented damage calculation and total attributes calculation with related unit tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="implemented damage calculation and total attributes calculation with related unit tests" />
   </component>
 </project>

@@ -99,4 +99,21 @@ public class HeroTest {
         Assert.assertEquals(expectedDamage, this.warrior.calculateDamage(), 0.0002f);
     }
 
+    @Test
+    public void DamageCalculation_ShouldBeCorrect_BasedOnDamagingAttribute_WithAdditionalArmorAttributes_And_EquippedWeapon(){
+        float expectedDamage = 33.6f;
+
+        try {
+            this.wizard.equipItem(new Weapon("quarterstaff", 1, null, 24, WeaponType.STAFF));
+            this.wizard.equipItem(new Armor("clothChest", 1, null, 5,
+                    new HeroAttribute(1, 1, 17), Slot.BODY, ArmorType.CLOTH));
+        }catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+
+        for(int i = 0; i < 3; i++){this.wizard.levelUp();}
+
+        Assert.assertEquals(expectedDamage, this.wizard.calculateDamage(), 0.0002f);
+    }
+
 }
