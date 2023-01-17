@@ -1,8 +1,9 @@
 package org.example.game_elements;
 
 import org.example.game_elements.types.Slot;
+import org.example.game_elements_extra.Item;
 
-public abstract class Equipment {
+public abstract class Equipment extends Item {
 
     private final String equipmentName;
     private final int requiredLevel;

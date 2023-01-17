@@ -3,7 +3,8 @@ package org.example.game_elements;
 import org.example.game_elements.types.ArmorType;
 import org.example.game_elements.types.Slot;
 import org.example.game_elements.types.WeaponType;
-import org.example.util.InvalidArmorException;
+import org.example.game_elements_extra.EXPManager;
+import org.example.game_elements_extra.HPManager;
 import org.example.util.InvalidWeaponException;
 
 import java.util.*;
@@ -12,7 +13,8 @@ public abstract class Hero {
 
     private final String heroName;
     public int heroLevel;
-    private long exp;
+    private EXPManager exp;
+    private HPManager hp;
     public HeroAttribute levelAttribute;
     public WeaponType[] validWeaponTypes;
     public ArmorType[] validArmorTypes;
@@ -21,7 +23,6 @@ public abstract class Hero {
     public Hero(String name){
         this.heroName = name;
         this.heroLevel = 1;
-        this.exp = 0;
         this.equipment = new HashMap<Slot, Equipment>();
 
         // The equipment map is initialized to be able to hold
@@ -38,9 +39,6 @@ public abstract class Hero {
     }
     public int getHeroLevel() {
         return heroLevel;
-    }
-    public long getExp() {
-        return exp;
     }
     public HeroAttribute getLevelAttribute() {
         return levelAttribute;

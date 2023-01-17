@@ -25,7 +25,7 @@ public class DisplayService {
 
         Weapon weapon = (Weapon) hero.getEquipment().get(Slot.WEAPON);
         builder.append(Slot.WEAPON.name() + ": ");
-        builder.append(weapon == null ? "No weapon equipped"
+        builder.append(weapon == null ? "No " + Slot.WEAPON.name() + " equipped"
                 : weapon.getEquipmentName() + " (" + weapon.getWeaponType() + "), Damage: " + weapon.getDamage());
         builder.append("\n");
 
