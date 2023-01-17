@@ -4,11 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="db7ad628-a34e-4f92-8b5b-ca25a9dc3202" name="Changes" comment="added damage calculations for all classes and added additional test for it">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/util/DisplayService.java" afterDir="false" />
+    <list default="true" id="db7ad628-a34e-4f92-8b5b-ca25a9dc3202" name="Changes" comment="added display of hero via a DisplayService and added related tests">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/game_logic/CombatEvent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/game_logic/GameController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/game_logic/GameEvent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/game_logic/HeroCreationController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/game_logic/LootEvent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/game_logic/WorldController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/game_elements/Hero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/game_elements/Hero.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/HeroTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/HeroTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -158,7 +161,7 @@
       <workItem from="1673859646875" duration="20126000" />
       <workItem from="1673940015490" duration="155000" />
       <workItem from="1673940440351" duration="28000" />
-      <workItem from="1673945196165" duration="4916000" />
+      <workItem from="1673945196165" duration="5589000" />
     </task>
     <task id="LOCAL−00001" summary="initialization of project rpg-game">
       <created>1673618568597</created>
@@ -238,7 +241,13 @@
       <option name="presentableId" value="LOCAL−00013" />
       <updated>1673946347626</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL−00014" summary="added display of hero via a DisplayService and added related tests">
+      <created>1673950150916</created>
+      <option name="number" value="LOCAL−00014" />
+      <option name="presentableId" value="LOCAL−00014" />
+      <updated>1673950150916</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -253,6 +262,7 @@
     <MESSAGE value="implemented Equipment, Armor and Weapon classes, Exception classes for invalid armor and weapon as well as functions for equipping equipment. Also implemented tests for these classes" />
     <MESSAGE value="implemented damage calculation and total attributes calculation with related unit tests" />
     <MESSAGE value="added damage calculations for all classes and added additional test for it" />
-    <option name="LAST_COMMIT_MESSAGE" value="added damage calculations for all classes and added additional test for it" />
+    <MESSAGE value="added display of hero via a DisplayService and added related tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="added display of hero via a DisplayService and added related tests" />
   </component>
 </project>
