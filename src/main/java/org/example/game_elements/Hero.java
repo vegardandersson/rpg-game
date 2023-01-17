@@ -70,10 +70,6 @@ public abstract class Hero {
 
     public abstract float calculateDamage();
 
-    public void displayHero(){
-
-    }
-
     public void equipItem(Equipment item) throws Exception {
         if(item.getEligibleSlot() == Slot.WEAPON){
             this.equipWeapon((Weapon) item);

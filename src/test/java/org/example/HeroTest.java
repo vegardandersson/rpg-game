@@ -4,6 +4,7 @@ import org.example.game_elements.*;
 import org.example.game_elements.types.ArmorType;
 import org.example.game_elements.types.Slot;
 import org.example.game_elements.types.WeaponType;
+import org.example.util.DisplayService;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -114,6 +115,36 @@ public class HeroTest {
         for(int i = 0; i < 3; i++){this.wizard.levelUp();}
 
         Assert.assertEquals(expectedDamage, this.wizard.calculateDamage(), 0.0002f);
+    }
+
+    @Test
+    public void DisplayService_DisplayHero_WarriorWithWeaponAndArmorEquipped_ShouldReturnCorrectString(){
+        String expectedDisplayString = """
+                defaultWarrior, Level 3
+
+
+                ---Total attributes---
+
+                Strength: 18, Dexterity: 9, Intelligence: 5
+
+
+                ---Equipment---
+
+                WEAPON: hammer (HAMMER), Damage: 7
+                HEAD: plateHelmet (PLATE), +2 Strength, +1 Dexterity, +1 Intelligence
+                BODY: No BODY equipped
+                LEGS: plateLeggings (PLATE), +5 Strength, +2 Dexterity, +1 Intelligence
+                """;
+
+        try {
+            this.warrior.equipItem(new Weapon("hammer", 1, null, 7, WeaponType.HAMMER));
+        }catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+
+        for(int i = 0; i < 2; i++){this.warrior.levelUp();}
+
+        Assert.assertEquals(expectedDisplayString, DisplayService.displayHero(this.warrior));
     }
 
 }
