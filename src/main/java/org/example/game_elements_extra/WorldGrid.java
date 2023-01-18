@@ -16,12 +16,23 @@ public class WorldGrid {
         this.floorNumber = 0;
     }
 
+    public WorldObjectType[][] getWorldGrid(){
+        return this.worldGrid;
+    }
+
+    public int getGridDimension() {
+        return this.gridDimension;
+    }
+
     public int getFloorNumber(){
         return this.floorNumber;
     }
 
     public WorldObjectType getContentOfPosition(int posX, int posY){
         return this.worldGrid[posX][posY];
+    }
+    public void setIndividualWorldGridTile(WorldObjectType type, int[] position){
+        this.worldGrid[position[0]][position[1]] = type;
     }
 
     private void spawnItems(WorldObjectType type, int numOfItems){
@@ -58,6 +69,7 @@ public class WorldGrid {
         populateWorld();
         this.floorNumber += 1;
         printFloor();
+        System.out.println("You are at floor: " + this.floorNumber);
     }
 
     public void printFloor(){

@@ -5,11 +5,12 @@ import org.example.game_elements.types.Slot;
 import org.example.game_elements.types.WeaponType;
 import org.example.game_elements_extra.EXPManager;
 import org.example.game_elements_extra.HPManager;
+import org.example.game_elements_extra.IsCombatant;
 import org.example.util.InvalidWeaponException;
 
 import java.util.*;
 
-public abstract class Hero {
+public abstract class Hero implements IsCombatant {
 
     private final String heroName;
     public int heroLevel;
@@ -66,7 +67,9 @@ public abstract class Hero {
 
     public abstract void levelUp();
 
-    public abstract float calculateDamage();
+    public boolean receiveDamage(float damage){
+        return this.hp.reduceCurrentHp(damage);
+    }
 
     public void equipItem(Equipment item) throws Exception {
         if(item.getEligibleSlot() == Slot.WEAPON){

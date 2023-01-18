@@ -1,6 +1,6 @@
 package org.example.game_elements_extra;
 
-public abstract class Enemy implements EnemyActions {
+public abstract class Enemy implements IsCombatant {
 
     private final String enemyName;
     private final EXPManager rewardExp;
@@ -25,7 +25,11 @@ public abstract class Enemy implements EnemyActions {
         return hp;
     }
 
-    public float getDamage() {
+    public float calculateDamage() {
         return damage;
+    }
+
+    public boolean receiveDamage(float damage){
+        return this.hp.reduceCurrentHp(damage);
     }
 }

@@ -28,4 +28,9 @@ public class Weapon extends Equipment {
     }
 
     public HeroAttribute getBonusAttributes(){return null;}
+
+    @Override
+    public String toString(){
+        return this.getEquipmentName() + " (" + this.getWeaponType() + "), Damage: " + this.getDamage();
+    }
 }

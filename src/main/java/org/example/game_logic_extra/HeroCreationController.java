@@ -1,4 +1,4 @@
-package org.example.game_logic;
+package org.example.game_logic_extra;
 
 import org.example.game_elements.*;
 

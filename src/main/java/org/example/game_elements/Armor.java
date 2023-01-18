@@ -32,4 +32,12 @@ public class Armor extends Equipment {
     public ArmorType getArmorType() {
         return armorType;
     }
+
+    @Override
+    public String toString(){
+        return this.getEquipmentName() + " (" + this.getArmorType() + ", " + this.getEligibleSlot().name() + "), +" +
+                bonusAttributes.getStrength() + " Strength, +" +
+                bonusAttributes.getDexterity() + " Dexterity, +" +
+                bonusAttributes.getIntelligence() + " Intelligence";
+    }
 }

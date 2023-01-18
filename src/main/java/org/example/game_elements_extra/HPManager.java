@@ -26,8 +26,9 @@ public class HPManager {
         this.maxHp = maxHp;
     }
 
-    public void reduceCurrentHp(float damage){
+    public boolean reduceCurrentHp(float damage){
         this.currentHp -= damage;
+        return this.currentHp <= 0;
     }
 
     public void increaseCurrentHp(float healing){
