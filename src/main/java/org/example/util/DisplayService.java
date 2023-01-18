@@ -10,6 +10,8 @@ import org.example.game_elements_extra.Item;
 import org.example.game_elements_extra.WorldGrid;
 import org.example.game_elements_extra.types.WorldObjectType;
 
+import java.io.PrintWriter;
+
 public class DisplayService {
 
     // Color codes for basic ANSI console colorscheme of 8 colors
@@ -25,7 +27,14 @@ public class DisplayService {
     public static final String COLOR_CYAN = "\u001B[36m";
     public static final String COLOR_WHITE = "\u001B[37m";
 
-    public static void displayWorld(WorldGrid world, Hero hero){
+    public static void displayWorld(WorldGrid world, int[] heroPosition){
+
+        String enemyIcon = DisplayService.COLOR_RED + " X " + DisplayService.COLOR_RESET;
+        String chestIcon = DisplayService.COLOR_YELLOW + " C " + DisplayService.COLOR_RESET;
+        String heroIcon = DisplayService.COLOR_GREEN + " 0 " + DisplayService.COLOR_RESET;
+        String exitIcon = DisplayService.COLOR_BLUE + " E " + DisplayService.COLOR_RESET;
+        String emptyIcon = " + ";
+
         StringBuilder builder = new StringBuilder();
 
         WorldObjectType[][] worldGrid = world.getWorldGrid();
@@ -33,10 +42,18 @@ public class DisplayService {
 
         for(int i = 0; i < gridDimension; i++){
             for(int j = 0; j < gridDimension; j++){
-                if(worldGrid[i][j] == null){
-                    builder.append("NULL ");
+                if(heroPosition != null && i == heroPosition[0] && j == heroPosition[1]){
+                    builder.append(heroIcon);
                 }else {
-                    builder.append(worldGrid[i][j].name());
+                    if (worldGrid[i][j] == null) {
+                        builder.append(emptyIcon);
+                    } else {
+                        switch (worldGrid[i][j]){
+                            case ENEMY -> builder.append(enemyIcon);
+                            case CHEST -> builder.append(chestIcon);
+                            case EXIT -> builder.append(exitIcon);
+                        }
+                    }
                 }
             }
             System.out.println(builder);

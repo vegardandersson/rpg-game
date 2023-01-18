@@ -68,23 +68,7 @@ public class WorldGrid {
         refreshWorld();
         populateWorld();
         this.floorNumber += 1;
-        printFloor();
         System.out.println("You are at floor: " + this.floorNumber);
-    }
-
-    public void printFloor(){
-        StringBuilder builder = new StringBuilder();
-        for(int i = 0; i < this.gridDimension; i++){
-            for(int j = 0; j < this.gridDimension; j++){
-                if(this.worldGrid[i][j] == null){
-                    builder.append("NULL ");
-                }else {
-                    builder.append(this.worldGrid[i][j].name());
-                }
-            }
-            System.out.println(builder);
-            builder = new StringBuilder();
-        }
     }
 
 }

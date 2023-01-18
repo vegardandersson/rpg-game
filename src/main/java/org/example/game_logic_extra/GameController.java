@@ -32,6 +32,7 @@ public class GameController {
         Scanner scanner = new Scanner(System.in);
 
         while(true){
+            DisplayService.displayWorld(this.world, this.heroPosition);
             traverse(scanner);
             WorldObjectType content = this.world.getContentOfPosition(this.heroPosition[0], this.heroPosition[1]);
 
