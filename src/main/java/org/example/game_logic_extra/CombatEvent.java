@@ -53,7 +53,8 @@ public class CombatEvent implements GameEvent {
 
     private boolean conductAttack(String attackerName, IsCombatant attacker, String receiverName, IsCombatant receiver){
         try {
-            TimeUnit.SECONDS.sleep(1);
+            System.out.println(". . .");
+            TimeUnit.SECONDS.sleep(2);
         }catch (InterruptedException e){
             System.out.println(e.getMessage());
         }

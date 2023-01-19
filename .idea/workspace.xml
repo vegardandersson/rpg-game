@@ -4,13 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="db7ad628-a34e-4f92-8b5b-ca25a9dc3202" name="Changes" comment="added xp and hp to combat and leveling up based on xp">
+    <list default="true" id="db7ad628-a34e-4f92-8b5b-ca25a9dc3202" name="Changes" comment="added generalized display methods, added colors to prints, added combat log">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/game_elements/Armor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/game_elements/Armor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/game_elements/Weapon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/game_elements/Weapon.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/game_logic_extra/CombatEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/game_logic_extra/CombatEvent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/game_logic_extra/GameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/game_logic_extra/GameController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/game_logic_extra/HeroCreationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/game_logic_extra/HeroCreationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/game_logic_extra/LootEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/game_logic_extra/LootEvent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/util/DisplayService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/util/DisplayService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/example/HeroTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/HeroTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -139,9 +137,9 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.HeroTest" />
+        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.HeroTest.DisplayService_DisplayHero_WarriorWithWeaponAndArmorEquipped_ShouldReturnCorrectString" />
         <item itemvalue="JUnit.EquipmentTest" />
-        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.HeroTest.DisplayOfHero_WarriorWithWeaponAndArmorEquipped_ShouldReturnCorrectString" />
       </list>
     </recent_temporary>
@@ -165,7 +163,7 @@
       <workItem from="1674112136137" duration="128000" />
       <workItem from="1674115194658" duration="7321000" />
       <workItem from="1674123328321" duration="618000" />
-      <workItem from="1674124206747" duration="4610000" />
+      <workItem from="1674124206747" duration="12094000" />
     </task>
     <task id="LOCAL−00001" summary="initialization of project rpg-game">
       <created>1673618568597</created>
@@ -287,7 +285,13 @@
       <option name="presentableId" value="LOCAL−00020" />
       <updated>1674122486716</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL−00021" summary="added generalized display methods, added colors to prints, added combat log">
+      <created>1674131272441</created>
+      <option name="number" value="LOCAL−00021" />
+      <option name="presentableId" value="LOCAL−00021" />
+      <updated>1674131272441</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -309,6 +313,7 @@
     <MESSAGE value="implemented combatEvent and lootEvent trigger when the hero encounters such an entity on the player board while moving, refactored game_logic package to game_logic_extra" />
     <MESSAGE value="added better printing and colors to displayal of worldGrid while playing" />
     <MESSAGE value="added xp and hp to combat and leveling up based on xp" />
-    <option name="LAST_COMMIT_MESSAGE" value="added xp and hp to combat and leveling up based on xp" />
+    <MESSAGE value="added generalized display methods, added colors to prints, added combat log" />
+    <option name="LAST_COMMIT_MESSAGE" value="added generalized display methods, added colors to prints, added combat log" />
   </component>
 </project>

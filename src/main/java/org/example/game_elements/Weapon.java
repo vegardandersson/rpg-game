@@ -2,6 +2,7 @@ package org.example.game_elements;
 
 import org.example.game_elements.types.Slot;
 import org.example.game_elements.types.WeaponType;
+import org.example.util.DisplayService;
 
 public class Weapon extends Equipment {
 
@@ -31,6 +32,8 @@ public class Weapon extends Equipment {
 
     @Override
     public String toString(){
-        return this.getEquipmentName() + " (" + this.getWeaponType() + "), Damage: " + this.getDamage();
+        return DisplayService.COLOR_YELLOW + this.getEquipmentName() +
+                DisplayService.COLOR_RESET + " (" + this.getWeaponType() + "), Damage: " +
+                DisplayService.COLOR_RED + this.getDamage() +DisplayService.COLOR_RESET;
     }
 }

@@ -2,6 +2,7 @@ package org.example.game_elements;
 
 import org.example.game_elements.types.ArmorType;
 import org.example.game_elements.types.Slot;
+import org.example.util.DisplayService;
 
 public class Armor extends Equipment {
 
@@ -36,8 +37,11 @@ public class Armor extends Equipment {
     @Override
     public String toString(){
         return this.getEquipmentName() + " (" + this.getArmorType() + ", " + this.getEligibleSlot().name() + "), +" +
-                bonusAttributes.getStrength() + " Strength, +" +
-                bonusAttributes.getDexterity() + " Dexterity, +" +
-                bonusAttributes.getIntelligence() + " Intelligence";
+                DisplayService.COLOR_RED + bonusAttributes.getStrength() +
+                DisplayService.COLOR_RESET + " Strength, +" +
+                DisplayService.COLOR_GREEN + bonusAttributes.getDexterity() +
+                DisplayService.COLOR_RESET + " Dexterity, +" +
+                DisplayService.COLOR_BLUE + bonusAttributes.getIntelligence() +
+                DisplayService.COLOR_RESET + " Intelligence";
     }
 }
