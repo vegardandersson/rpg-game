@@ -17,8 +17,7 @@ public class GameController {
 
     public void startGame(){
         this.setHero(HeroCreationController.createHero());
-        System.out.println("Success!\n\n");
-        System.out.println(DisplayService.displayHero(this.hero));
+        DisplayService.displayMessage(DisplayService.displayHero(this.hero));
 
         this.world = new WorldGrid(10);
         this.world.generateNewFloor();
@@ -36,39 +35,39 @@ public class GameController {
             traverse(scanner);
             WorldObjectType content = this.world.getContentOfPosition(this.heroPosition[0], this.heroPosition[1]);
 
-            if(content == null){
-                System.out.println("Moved to (" + this.heroPosition[0] + ", " + this.heroPosition[1] + ")");
-            }else {
+            if(content != null){
                 switch (content) {
                     case ENEMY -> {
                         GameEvent event = new CombatEvent(new Goblin(), this.hero);
                         event.start();
-                        System.out.println("Encounter over...");
+                        DisplayService.displayMessage("Encounter over...");
                         this.world.setIndividualWorldGridTile(null, this.heroPosition);
                     }
                     case CHEST -> {
                         GameEvent event = new LootEvent(new Chest(), this.hero);
                         if(event.start()) {
-                            System.out.println("Encounter over...");
+                            DisplayService.displayMessage("Encounter over...");
                             this.world.setIndividualWorldGridTile(null, this.heroPosition);
                         }
                     }
                     case EXIT -> {
-                        System.out.println("You found the exit to the next floor!");
-                        System.out.println("Do you wish to continue to the next floor?");
-                        System.out.println("Y/N");
+                        DisplayService.displayMessage("You found the " +
+                                DisplayService.COLOR_BLUE + "exit" +
+                                DisplayService.COLOR_RESET + " to the next floor!");
+                        DisplayService.displayMessage("Do you wish to continue to the next floor?");
+                        DisplayService.displayCommand("Y/N");
                         boolean validInput = false;
                         while(!validInput) {
                             String input = scanner.nextLine().toLowerCase();
                             if(!input.matches("[yn]")){
-                                System.out.println("Invalid input, try again...");
+                                DisplayService.displayError("Invalid input, try again...");
                                 continue;
                             }
                             if(input.equals("y")){
                                 this.world.generateNewFloor();
                                 this.heroPosition = new int[]{0, 0};
                             }else{
-                                System.out.println("You continue exploring the current floor...");
+                                DisplayService.displayMessage("You continue exploring the current floor...");
                             }
                             validInput = true;
                         }
@@ -82,11 +81,11 @@ public class GameController {
         boolean validMove = false;
 
         while(!validMove){
-            System.out.println("W: up, S: down, A: left, D: right");
+            DisplayService.displayCommand("W: up, S: down, A: left, D: right (H: Display Hero)");
             String input = scanner.nextLine().toLowerCase();
 
             if(!input.matches("[wasd]")){
-                System.out.println("Invalid input, try again...");
+                DisplayService.displayError("Invalid input, try again...");
                 continue;
             }
 
@@ -108,13 +107,18 @@ public class GameController {
                     newPosition[0] = this.heroPosition[0] - 1;
                     newPosition[1] = this.heroPosition[1];
                 }
+                case "h" -> {
+                    DisplayService.displayMessage(DisplayService.displayHero(this.hero));
+                    validMove = true;
+                    continue;
+                }
             }
 
             if(newPosition[0] >= 0 && newPosition[0] < 10 && newPosition[1] >= 0 && newPosition[1] < 10){
                 this.heroPosition = newPosition;
                 validMove = true;
             }else{
-                System.out.println("You hit the wall, turn back!");
+                DisplayService.displayError("You hit the wall, turn back!");
             }
         }
     }

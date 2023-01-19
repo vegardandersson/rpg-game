@@ -19,14 +19,14 @@ public class LootEvent implements GameEvent {
     }
 
     public boolean start(){
-        System.out.println("You opened a chest!");
-        System.out.println("You found the following item: \n");
+        DisplayService.displayMessage("You opened a " + DisplayService.COLOR_YELLOW + "chest" + DisplayService.COLOR_RESET + "!");
+        DisplayService.displayMessage("You found the following item: ");
 
         Item loot = this.lootable.open();
-        System.out.println(DisplayService.displayItem(loot) + "\n");
+        DisplayService.displayMessage(DisplayService.displayItem(loot) + "\n");
 
-        System.out.println("Do you want to equip it?");
-        System.out.println("Y/N");
+        DisplayService.displayMessage("Do you want to equip it?");
+        DisplayService.displayCommand("Y/N");
 
         Scanner scanner = new Scanner(System.in);
 
@@ -34,7 +34,7 @@ public class LootEvent implements GameEvent {
         while(!validInput) {
             String input = scanner.nextLine().toLowerCase();
             if(!input.matches("[yn]")){
-                System.out.println("Invalid input, try again...");
+                DisplayService.displayError("Invalid input, try again...");
                 continue;
             }
             if(input.equals("y")){
@@ -43,10 +43,10 @@ public class LootEvent implements GameEvent {
                 }catch (Exception e){
                     System.out.println(e.getMessage());
                 }
-                System.out.println("Equipped new item!");
-                System.out.println(DisplayService.displayHero(this.hero));
+                DisplayService.displayMessage(DisplayService.COLOR_GREEN + "Equipped new item!" + DisplayService.COLOR_RESET);
+                DisplayService.displayMessage(DisplayService.displayHero(this.hero));
             }else{
-                System.out.println("You continue exploring the current floor...");
+                DisplayService.displayMessage("You continue exploring the current floor...");
                 return false;
             }
             validInput = true;

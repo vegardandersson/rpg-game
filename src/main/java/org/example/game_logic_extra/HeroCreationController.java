@@ -1,6 +1,7 @@
 package org.example.game_logic_extra;
 
 import org.example.game_elements.*;
+import org.example.util.DisplayService;
 
 import java.util.Scanner;
 
@@ -8,10 +9,10 @@ public class HeroCreationController {
 
     public static Hero createHero(){
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Name your character");
+        DisplayService.displayMessage("Name your character");
         String characterName = scanner.nextLine();
-        System.out.println("Choose your class\n");
-        System.out.println("1: Warrior, 2: Wizard, 3: Ranger, 4: Rogue");
+        DisplayService.displayMessage("Choose your class\n");
+        DisplayService.displayCommand("1: Warrior, 2: Wizard, 3: Ranger, 4: Rogue");
         int characterClass = scanner.nextInt();
 
         switch (characterClass){

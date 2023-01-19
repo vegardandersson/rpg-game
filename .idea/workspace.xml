@@ -4,19 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="db7ad628-a34e-4f92-8b5b-ca25a9dc3202" name="Changes" comment="added better printing and colors to displayal of worldGrid while playing">
+    <list default="true" id="db7ad628-a34e-4f92-8b5b-ca25a9dc3202" name="Changes" comment="added xp and hp to combat and leveling up based on xp">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/game_elements/Hero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/game_elements/Hero.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/game_elements/Ranger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/game_elements/Ranger.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/game_elements/Rogue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/game_elements/Rogue.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/game_elements/Warrior.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/game_elements/Warrior.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/game_elements/Wizard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/game_elements/Wizard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/game_elements_extra/EXPManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/game_elements_extra/EXPManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/game_elements_extra/Goblin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/game_elements_extra/Goblin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/game_elements_extra/HPManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/game_elements_extra/HPManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/game_logic_extra/CombatEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/game_logic_extra/CombatEvent.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/game_logic_extra/GameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/game_logic_extra/GameController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/game_logic_extra/HeroCreationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/game_logic_extra/HeroCreationController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/game_logic_extra/LootEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/game_logic_extra/LootEvent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/util/DisplayService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/util/DisplayService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/HeroTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/HeroTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,7 +51,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/VAnde1/JavaProjects/rpg-game&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/VAnde1/JavaProjects/noroff-work&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -65,7 +60,7 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="JUnit.HeroTest">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.Main" />
       <module name="rpg-game" />
@@ -125,7 +120,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="HeroTest.TestDisplayOfHero" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="HeroTest.DisplayService_DisplayHero_WarriorWithWeaponAndArmorEquipped_ShouldReturnCorrectString" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="rpg-game" />
       <extension name="coverage">
         <pattern>
@@ -135,7 +130,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="org.example" />
       <option name="MAIN_CLASS_NAME" value="org.example.HeroTest" />
-      <option name="METHOD_NAME" value="TestDisplayOfHero" />
+      <option name="METHOD_NAME" value="DisplayService_DisplayHero_WarriorWithWeaponAndArmorEquipped_ShouldReturnCorrectString" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -143,11 +138,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.HeroTest" />
+        <item itemvalue="JUnit.HeroTest.DisplayService_DisplayHero_WarriorWithWeaponAndArmorEquipped_ShouldReturnCorrectString" />
         <item itemvalue="JUnit.EquipmentTest" />
+        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.HeroTest.DisplayOfHero_WarriorWithWeaponAndArmorEquipped_ShouldReturnCorrectString" />
-        <item itemvalue="JUnit.HeroTest.TestDisplayOfHero" />
       </list>
     </recent_temporary>
   </component>
@@ -168,7 +163,9 @@
       <workItem from="1674026772322" duration="262000" />
       <workItem from="1674032115368" duration="12654000" />
       <workItem from="1674112136137" duration="128000" />
-      <workItem from="1674115194658" duration="7254000" />
+      <workItem from="1674115194658" duration="7321000" />
+      <workItem from="1674123328321" duration="618000" />
+      <workItem from="1674124206747" duration="4610000" />
     </task>
     <task id="LOCAL−00001" summary="initialization of project rpg-game">
       <created>1673618568597</created>
@@ -284,7 +281,13 @@
       <option name="presentableId" value="LOCAL−00019" />
       <updated>1674053417730</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL−00020" summary="added xp and hp to combat and leveling up based on xp">
+      <created>1674122486716</created>
+      <option name="number" value="LOCAL−00020" />
+      <option name="presentableId" value="LOCAL−00020" />
+      <updated>1674122486716</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -305,6 +308,7 @@
     <MESSAGE value="implemented a world grid which is traversable using WASD keys and where the player can encounter enemies, chests or an exit to the next floor" />
     <MESSAGE value="implemented combatEvent and lootEvent trigger when the hero encounters such an entity on the player board while moving, refactored game_logic package to game_logic_extra" />
     <MESSAGE value="added better printing and colors to displayal of worldGrid while playing" />
-    <option name="LAST_COMMIT_MESSAGE" value="added better printing and colors to displayal of worldGrid while playing" />
+    <MESSAGE value="added xp and hp to combat and leveling up based on xp" />
+    <option name="LAST_COMMIT_MESSAGE" value="added xp and hp to combat and leveling up based on xp" />
   </component>
 </project>

@@ -5,6 +5,8 @@ import org.example.game_elements_extra.Enemy;
 import org.example.game_elements_extra.IsCombatant;
 import org.example.util.DisplayService;
 
+import java.util.concurrent.TimeUnit;
+
 public class CombatEvent implements GameEvent {
 
     private Enemy enemy;
@@ -16,25 +18,28 @@ public class CombatEvent implements GameEvent {
     }
 
     public boolean start(){
-        System.out.println("You encountered an enemy of type: " + this.enemy.getEnemyName());
-        System.out.println("It engaged combat with you!");
+        DisplayService.displayMessage("You encountered an enemy of type: " +
+                DisplayService.COLOR_WHITE + this.enemy.getEnemyName() +
+                DisplayService.COLOR_RESET);
+        DisplayService.displayMessage("It engaged combat with you!");
 
         boolean combatIsOver = false;
 
         while(!combatIsOver){
-            if(conductAttack(this.enemy, this.hero)){
-                System.out.println("You died!");
+            if(conductAttack(this.enemy.getEnemyName(), this.enemy, this.hero.getHeroName(), this.hero)){
+                DisplayService.displayMessage("You " + DisplayService.COLOR_RED + "DIED!");
                 System.exit(200);
             }
-            if(conductAttack(this.hero, this.enemy)){
-                System.out.println("You killed the " + this.enemy.getEnemyName() + "!\n");
+            if(conductAttack(this.hero.getHeroName(), this.hero, this.enemy.getEnemyName(), this.enemy)){
+                DisplayService.displayMessage("You killed the " + DisplayService.COLOR_WHITE +
+                        this.enemy.getEnemyName() + DisplayService.COLOR_RESET + "!");
 
                 //Replenish HP
-                System.out.println("Your HP replenished!\n");
+                System.out.println("Your " + DisplayService.COLOR_GREEN + "HP" + DisplayService.COLOR_RESET + " replenished!");
                 this.hero.getHp().replenishHp();
 
                 //Give Exp
-                System.out.println("You gained " +
+                DisplayService.displayMessage("You gained " +
                         DisplayService.COLOR_YELLOW + this.enemy.getRewardExp().getExp() +
                         DisplayService.COLOR_RESET + " exp!");
                 this.hero.getExp().increaseExp(this.enemy.getRewardExp(), this.hero);
@@ -46,8 +51,21 @@ public class CombatEvent implements GameEvent {
         return true;
     }
 
-    private boolean conductAttack(IsCombatant attacker, IsCombatant receiver){
-        return receiver.receiveDamage(attacker.calculateDamage());
+    private boolean conductAttack(String attackerName, IsCombatant attacker, String receiverName, IsCombatant receiver){
+        try {
+            TimeUnit.SECONDS.sleep(1);
+        }catch (InterruptedException e){
+            System.out.println(e.getMessage());
+        }
+        float attackDamage = attacker.calculateDamage();
+        DisplayService.displayMessage(
+                DisplayService.COLOR_WHITE + attackerName +
+                DisplayService.COLOR_RESET + " hits " +
+                DisplayService.COLOR_WHITE + receiverName +
+                DisplayService.COLOR_RESET + " for " +
+                DisplayService.COLOR_RED + attackDamage +
+                DisplayService.COLOR_RESET + " damage!");
+        return receiver.receiveDamage(attackDamage);
     }
 
 }

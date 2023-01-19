@@ -27,12 +27,25 @@ public class DisplayService {
     public static final String COLOR_CYAN = "\u001B[36m";
     public static final String COLOR_WHITE = "\u001B[37m";
 
+
+    public static void displayMessage(String message){
+        System.out.println("\n" + message + "\n");
+    }
+
+    public static void displayError(String message){
+        DisplayService.displayMessage(COLOR_RED + message + COLOR_RESET);
+    }
+
+    public static void displayCommand(String message){
+        DisplayService.displayMessage(COLOR_CYAN + message + COLOR_RESET);
+    }
+
     public static void displayWorld(WorldGrid world, int[] heroPosition){
 
-        String enemyIcon = DisplayService.COLOR_RED + " X " + DisplayService.COLOR_RESET;
-        String chestIcon = DisplayService.COLOR_YELLOW + " C " + DisplayService.COLOR_RESET;
-        String heroIcon = DisplayService.COLOR_GREEN + " 0 " + DisplayService.COLOR_RESET;
-        String exitIcon = DisplayService.COLOR_BLUE + " E " + DisplayService.COLOR_RESET;
+        String enemyIcon = COLOR_RED + " X " + COLOR_RESET;
+        String chestIcon = COLOR_YELLOW + " C " + COLOR_RESET;
+        String heroIcon = COLOR_GREEN + " 0 " + COLOR_RESET;
+        String exitIcon = COLOR_BLUE + " E " + COLOR_RESET;
         String emptyIcon = " + ";
 
         StringBuilder builder = new StringBuilder();
@@ -59,6 +72,7 @@ public class DisplayService {
             System.out.println(builder);
             builder = new StringBuilder();
         }
+        System.out.println("Floor: " + COLOR_WHITE + world.getFloorNumber());
     }
 
     public static String displayItem(Item item){
@@ -72,9 +86,9 @@ public class DisplayService {
 
         HeroAttribute totalAttributes = hero.calculateTotalAttributes();
         builder.append("---Total attributes---\n\n");
-        builder.append("Strength: " + totalAttributes.getStrength());
-        builder.append(", Dexterity: " + totalAttributes.getDexterity());
-        builder.append(", Intelligence: " + totalAttributes.getIntelligence());
+        builder.append("Strength: " + COLOR_RED + totalAttributes.getStrength() + COLOR_RESET);
+        builder.append(", Dexterity: " + COLOR_GREEN + totalAttributes.getDexterity() + COLOR_RESET);
+        builder.append(", Intelligence: " + COLOR_BLUE + totalAttributes.getIntelligence() + COLOR_RESET);
         builder.append("\n\n\n");
 
         builder.append("---Equipment---\n\n");
@@ -82,7 +96,9 @@ public class DisplayService {
         Weapon weapon = (Weapon) hero.getEquipment().get(Slot.WEAPON);
         builder.append(Slot.WEAPON.name() + ": ");
         builder.append(weapon == null ? "No " + Slot.WEAPON.name() + " equipped"
-                : weapon.getEquipmentName() + " (" + weapon.getWeaponType() + "), Damage: " + weapon.getDamage());
+                : COLOR_YELLOW + weapon.getEquipmentName() +
+                COLOR_RESET + " (" + weapon.getWeaponType() + "), Damage: " +
+                COLOR_RED + weapon.getDamage() + COLOR_RESET);
         builder.append("\n");
 
 
@@ -93,9 +109,12 @@ public class DisplayService {
                 builder.append(slot.name() + ": ");
                 builder.append(armor == null ? "No " + slot.name() + " equipped"
                         : armor.getEquipmentName() + " (" + armor.getArmorType() + "), +" +
-                        bonusAttributes.getStrength() + " Strength, +" +
-                        bonusAttributes.getDexterity() + " Dexterity, +" +
-                        bonusAttributes.getIntelligence() + " Intelligence");
+                        DisplayService.COLOR_RED + bonusAttributes.getStrength() +
+                        DisplayService.COLOR_RESET + " Strength, +" +
+                        DisplayService.COLOR_GREEN + bonusAttributes.getDexterity() +
+                        DisplayService.COLOR_RESET + " Dexterity, +" +
+                        DisplayService.COLOR_BLUE + bonusAttributes.getIntelligence() +
+                        DisplayService.COLOR_RESET + " Intelligence");
                 builder.append("\n");
             }
         }

@@ -125,15 +125,15 @@ public class HeroTest {
 
                 ---Total attributes---
 
-                Strength: 18, Dexterity: 9, Intelligence: 5
+                Strength: \u001B[31m18\u001B[0m, Dexterity: \u001B[32m9\u001B[0m, Intelligence: \u001B[34m5\u001B[0m
 
 
                 ---Equipment---
 
-                WEAPON: hammer (HAMMER), Damage: 7
-                HEAD: plateHelmet (PLATE), +2 Strength, +1 Dexterity, +1 Intelligence
+                WEAPON: \u001B[33mhammer\u001B[0m (HAMMER), Damage: \u001B[31m7\u001B[0m
+                HEAD: plateHelmet (PLATE), +\u001B[31m2\u001B[0m Strength, +\u001B[32m1\u001B[0m Dexterity, +\u001B[34m1\u001B[0m Intelligence
                 BODY: No BODY equipped
-                LEGS: plateLeggings (PLATE), +5 Strength, +2 Dexterity, +1 Intelligence
+                LEGS: plateLeggings (PLATE), +\u001B[31m5\u001B[0m Strength, +\u001B[32m2\u001B[0m Dexterity, +\u001B[34m1\u001B[0m Intelligence
                 """;
 
         try {
