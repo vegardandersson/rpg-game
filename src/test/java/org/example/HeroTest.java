@@ -6,7 +6,6 @@ import org.example.game_elements.types.Slot;
 import org.example.game_elements.types.WeaponType;
 import org.example.util.DisplayService;
 import org.junit.Assert;
-import org.junit.Before;
 import org.junit.Test;
 
 public class HeroTest {

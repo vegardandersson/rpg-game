@@ -37,11 +37,91 @@ public class EquipmentTest {
                 Slot.HEAD, ArmorType.PLATE);
     }
 
+
+    // Construction parameter tests for Equipment of type: Weapon
     @Test
-    public void ConstructWeapon_ShouldHaveCorrectLevelRequirement(){
-        int baseLevel = 1;
-        Assert.assertEquals(this.hammer.getRequiredLevel(), baseLevel);
+    public void ConstructWeapon_ShouldHaveCorrect_WeaponName(){
+        String expectedWeaponName = "weapon";
+        Equipment weapon = new Weapon("weapon", 3, null, 11, WeaponType.SWORD);
+        Assert.assertEquals(expectedWeaponName, weapon.getEquipmentName());
     }
+    @Test
+    public void ConstructWeapon_ShouldHaveCorrect_LevelRequirement(){
+        int expectedLevelRequirement = 3;
+        Equipment weapon = new Weapon("weapon", 3, null, 11, WeaponType.SWORD);
+        Assert.assertEquals(expectedLevelRequirement, weapon.getRequiredLevel());
+    }
+    @Test
+    public void ConstructWeapon_ShouldHaveCorrect_SlotRequirement(){
+        Slot expectedSlotRequirement = Slot.WEAPON;
+        Equipment weapon = new Weapon("weapon", 3, null, 11, WeaponType.SWORD);
+        Assert.assertEquals(expectedSlotRequirement, weapon.getEligibleSlot());
+    }
+    @Test
+    public void ConstructWeapon_ShouldHaveCorrect_WeaponType(){
+        WeaponType expectedWeaponType = WeaponType.SWORD;
+        Weapon weapon = new Weapon("weapon", 3, null, 11, WeaponType.SWORD);
+        Assert.assertEquals(expectedWeaponType, weapon.getWeaponType());
+    }
+    @Test
+    public void ConstructWeapon_ShouldHaveCorrect_WeaponDamage(){
+        int expectedWeaponDamage = 11;
+        Weapon weapon = new Weapon("weapon", 3, null, 11, WeaponType.SWORD);
+        Assert.assertEquals(expectedWeaponDamage, weapon.getDamage());
+    }
+
+
+
+    // Construction parameter tests for Equipment of type: Armor
+    @Test
+    public void ConstructArmor_ShouldHaveCorrect_ArmorName(){
+        String expectedArmorName = "plateHelmet";
+        Equipment armor = new Armor(
+                "plateHelmet", 1, null, 7,
+                new HeroAttribute(2, 1, 1),
+                Slot.HEAD, ArmorType.PLATE);
+        Assert.assertEquals(expectedArmorName, armor.getEquipmentName());
+    }
+    @Test
+    public void ConstructArmor_ShouldHaveCorrect_LevelRequirement(){
+        int expectedLevelRequirement = 1;
+        Equipment armor = new Armor(
+                "plateHelmet", 1, null, 7,
+                new HeroAttribute(2, 1, 1),
+                Slot.HEAD, ArmorType.PLATE);
+        Assert.assertEquals(expectedLevelRequirement, armor.getRequiredLevel());
+    }
+    @Test
+    public void ConstructArmor_ShouldHaveCorrect_SlotRequirement(){
+        Slot expectedSlotRequirement = Slot.HEAD;
+        Equipment armor = new Armor(
+                "plateHelmet", 1, null, 7,
+                new HeroAttribute(2, 1, 1),
+                Slot.HEAD, ArmorType.PLATE);
+        Assert.assertEquals(expectedSlotRequirement, armor.getEligibleSlot());
+    }
+    @Test
+    public void ConstructArmor_ShouldHaveCorrect_ArmorType(){
+        ArmorType expectedArmorType = ArmorType.PLATE;
+        Armor armor = new Armor(
+                "plateHelmet", 1, null, 7,
+                new HeroAttribute(2, 1, 1),
+                Slot.HEAD, ArmorType.PLATE);
+        Assert.assertEquals(expectedArmorType, armor.getArmorType());
+    }
+    @Test
+    public void ConstructArmor_ShouldHaveCorrect_ArmorAttributes(){
+        int[] expectedArmorAttributes = {2, 1, 1};
+        Armor armor = new Armor(
+                "plateHelmet", 1, null, 7,
+                new HeroAttribute(2, 1, 1),
+                Slot.HEAD, ArmorType.PLATE);
+        Assert.assertEquals(expectedArmorAttributes[0], armor.getBonusAttributes().getStrength());
+        Assert.assertEquals(expectedArmorAttributes[1], armor.getBonusAttributes().getDexterity());
+        Assert.assertEquals(expectedArmorAttributes[2], armor.getBonusAttributes().getIntelligence());
+    }
+
+
 
     @Test
     public void EquipHammerWeapon_Warrior_ShouldSucceed_And_BeAddedToHeroEquipment(){
