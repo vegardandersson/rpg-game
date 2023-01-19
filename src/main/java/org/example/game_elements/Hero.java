@@ -6,6 +6,7 @@ import org.example.game_elements.types.WeaponType;
 import org.example.game_elements_extra.EXPManager;
 import org.example.game_elements_extra.HPManager;
 import org.example.game_elements_extra.IsCombatant;
+import org.example.util.DisplayService;
 import org.example.util.InvalidWeaponException;
 
 import java.util.*;
@@ -17,6 +18,7 @@ public abstract class Hero implements IsCombatant {
     private EXPManager exp;
     private HPManager hp;
     public HeroAttribute levelAttribute;
+    public HeroAttribute levelUpAttribute;
     public WeaponType[] validWeaponTypes;
     public ArmorType[] validArmorTypes;
     private Map<Slot, Equipment> equipment;
@@ -24,6 +26,7 @@ public abstract class Hero implements IsCombatant {
     public Hero(String name){
         this.heroName = name;
         this.heroLevel = 1;
+        this.exp = new EXPManager();
         this.equipment = new HashMap<Slot, Equipment>();
 
         // The equipment map is initialized to be able to hold
@@ -41,9 +44,27 @@ public abstract class Hero implements IsCombatant {
     public int getHeroLevel() {
         return heroLevel;
     }
+    public EXPManager getExp(){return exp;}
+    public HPManager getHp() {
+        return hp;
+    }
+
+    public void setHp(HPManager hp) {
+        this.hp = hp;
+    }
+
     public HeroAttribute getLevelAttribute() {
         return levelAttribute;
     }
+
+    public HeroAttribute getLevelUpAttribute() {
+        return levelUpAttribute;
+    }
+
+    public void setLevelUpAttribute(HeroAttribute levelUpAttribute) {
+        this.levelUpAttribute = levelUpAttribute;
+    }
+
     public WeaponType[] getValidWeaponTypes() {
         return validWeaponTypes;
     }
@@ -65,7 +86,16 @@ public abstract class Hero implements IsCombatant {
         return HeroAttribute.getSumOfAttributes(allAttributeSources);
     }
 
-    public abstract void levelUp();
+    public void levelUp(){
+        this.levelAttribute.increaseAttributes(this.levelUpAttribute);
+        this.heroLevel += 1;
+        this.getHp().increaseMaxHp(20);
+        this.getHp().replenishHp();
+
+        System.out.println("\nYou increased to level " +
+                DisplayService.COLOR_GREEN + this.heroLevel +
+                DisplayService.COLOR_RESET + "!\n");
+    }
 
     public boolean receiveDamage(float damage){
         return this.hp.reduceCurrentHp(damage);

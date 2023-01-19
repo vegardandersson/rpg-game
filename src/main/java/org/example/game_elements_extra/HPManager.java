@@ -39,4 +39,8 @@ public class HPManager {
     public void increaseMaxHp(float increase){
         this.maxHp += increase;
     }
+
+    public void replenishHp(){
+        this.currentHp = this.maxHp;
+    }
 }

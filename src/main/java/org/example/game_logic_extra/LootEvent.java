@@ -47,6 +47,7 @@ public class LootEvent implements GameEvent {
                 System.out.println(DisplayService.displayHero(this.hero));
             }else{
                 System.out.println("You continue exploring the current floor...");
+                return false;
             }
             validInput = true;
         }

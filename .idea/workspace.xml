@@ -4,11 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="db7ad628-a34e-4f92-8b5b-ca25a9dc3202" name="Changes" comment="implemented combatEvent and lootEvent trigger when the hero encounters such an entity on the player board while moving, refactored game_logic package to game_logic_extra">
+    <list default="true" id="db7ad628-a34e-4f92-8b5b-ca25a9dc3202" name="Changes" comment="added better printing and colors to displayal of worldGrid while playing">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/game_elements_extra/WorldGrid.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/game_elements_extra/WorldGrid.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/game_elements/Hero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/game_elements/Hero.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/game_elements/Ranger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/game_elements/Ranger.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/game_elements/Rogue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/game_elements/Rogue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/game_elements/Warrior.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/game_elements/Warrior.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/game_elements/Wizard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/game_elements/Wizard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/game_elements_extra/EXPManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/game_elements_extra/EXPManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/game_elements_extra/Goblin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/game_elements_extra/Goblin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/game_elements_extra/HPManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/game_elements_extra/HPManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/game_logic_extra/CombatEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/game_logic_extra/CombatEvent.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/game_logic_extra/GameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/game_logic_extra/GameController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/util/DisplayService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/util/DisplayService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/game_logic_extra/LootEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/game_logic_extra/LootEvent.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -158,7 +166,9 @@
       <workItem from="1673940440351" duration="28000" />
       <workItem from="1673945196165" duration="21993000" />
       <workItem from="1674026772322" duration="262000" />
-      <workItem from="1674032115368" duration="12466000" />
+      <workItem from="1674032115368" duration="12654000" />
+      <workItem from="1674112136137" duration="128000" />
+      <workItem from="1674115194658" duration="7254000" />
     </task>
     <task id="LOCAL−00001" summary="initialization of project rpg-game">
       <created>1673618568597</created>
@@ -268,7 +278,13 @@
       <option name="presentableId" value="LOCAL−00018" />
       <updated>1674049656865</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL−00019" summary="added better printing and colors to displayal of worldGrid while playing">
+      <created>1674053417730</created>
+      <option name="number" value="LOCAL−00019" />
+      <option name="presentableId" value="LOCAL−00019" />
+      <updated>1674053417730</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -288,6 +304,7 @@
     <MESSAGE value="implemented HeroCreationController and setup the first initial game loop" />
     <MESSAGE value="implemented a world grid which is traversable using WASD keys and where the player can encounter enemies, chests or an exit to the next floor" />
     <MESSAGE value="implemented combatEvent and lootEvent trigger when the hero encounters such an entity on the player board while moving, refactored game_logic package to game_logic_extra" />
-    <option name="LAST_COMMIT_MESSAGE" value="implemented combatEvent and lootEvent trigger when the hero encounters such an entity on the player board while moving, refactored game_logic package to game_logic_extra" />
+    <MESSAGE value="added better printing and colors to displayal of worldGrid while playing" />
+    <option name="LAST_COMMIT_MESSAGE" value="added better printing and colors to displayal of worldGrid while playing" />
   </component>
 </project>

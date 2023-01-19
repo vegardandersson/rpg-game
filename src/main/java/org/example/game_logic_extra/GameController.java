@@ -48,9 +48,10 @@ public class GameController {
                     }
                     case CHEST -> {
                         GameEvent event = new LootEvent(new Chest(), this.hero);
-                        event.start();
-                        System.out.println("Encounter over...");
-                        this.world.setIndividualWorldGridTile(null, this.heroPosition);
+                        if(event.start()) {
+                            System.out.println("Encounter over...");
+                            this.world.setIndividualWorldGridTile(null, this.heroPosition);
+                        }
                     }
                     case EXIT -> {
                         System.out.println("You found the exit to the next floor!");
@@ -91,19 +92,19 @@ public class GameController {
 
             int[] newPosition = new int[2];
             switch (input) {
-                case "w" -> {
+                case "d" -> {
                     newPosition[0] = this.heroPosition[0];
                     newPosition[1] = this.heroPosition[1] + 1;
                 }
-                case "s" -> {
+                case "a" -> {
                     newPosition[0] = this.heroPosition[0];
                     newPosition[1] = this.heroPosition[1] - 1;
                 }
-                case "d" -> {
+                case "s" -> {
                     newPosition[0] = this.heroPosition[0] + 1;
                     newPosition[1] = this.heroPosition[1];
                 }
-                case "a" -> {
+                case "w" -> {
                     newPosition[0] = this.heroPosition[0] - 1;
                     newPosition[1] = this.heroPosition[1];
                 }
