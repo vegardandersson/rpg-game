@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="db7ad628-a34e-4f92-8b5b-ca25a9dc3202" name="Changes" comment="edited Hero tests according to assignment requirements">
+    <list default="true" id="db7ad628-a34e-4f92-8b5b-ca25a9dc3202" name="Changes" comment="edited parts of Equipment test to be in line with assignment requriements">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/game_elements/Hero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/game_elements/Hero.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/example/EquipmentTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/EquipmentTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/HeroTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/HeroTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -161,7 +161,8 @@
       <workItem from="1674112136137" duration="128000" />
       <workItem from="1674115194658" duration="7321000" />
       <workItem from="1674123328321" duration="618000" />
-      <workItem from="1674124206747" duration="13524000" />
+      <workItem from="1674124206747" duration="13689000" />
+      <workItem from="1674198334969" duration="1535000" />
     </task>
     <task id="LOCAL−00001" summary="initialization of project rpg-game">
       <created>1673618568597</created>
@@ -295,7 +296,13 @@
       <option name="presentableId" value="LOCAL−00022" />
       <updated>1674138719228</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL−00023" summary="edited parts of Equipment test to be in line with assignment requriements">
+      <created>1674140131039</created>
+      <option name="number" value="LOCAL−00023" />
+      <option name="presentableId" value="LOCAL−00023" />
+      <updated>1674140131039</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -319,6 +326,7 @@
     <MESSAGE value="added xp and hp to combat and leveling up based on xp" />
     <MESSAGE value="added generalized display methods, added colors to prints, added combat log" />
     <MESSAGE value="edited Hero tests according to assignment requirements" />
-    <option name="LAST_COMMIT_MESSAGE" value="edited Hero tests according to assignment requirements" />
+    <MESSAGE value="edited parts of Equipment test to be in line with assignment requriements" />
+    <option name="LAST_COMMIT_MESSAGE" value="edited parts of Equipment test to be in line with assignment requriements" />
   </component>
 </project>

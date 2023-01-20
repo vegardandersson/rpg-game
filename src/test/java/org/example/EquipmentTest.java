@@ -4,38 +4,14 @@ import org.example.game_elements.*;
 import org.example.game_elements.types.ArmorType;
 import org.example.game_elements.types.Slot;
 import org.example.game_elements.types.WeaponType;
+import org.example.util.InvalidArmorException;
+import org.example.util.InvalidWeaponException;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
 public class EquipmentTest {
 
-    private Hero warrior;
-    private Hero ranger;
-
-    private Equipment hammer;
-    private Equipment hammerTooHighLevel;
-
-    private Equipment plateHelmet;
-    private Equipment plateHelmetTooHighLevel;
-
-    @Before
-    public void instantiate(){
-        this.warrior = new Warrior("defaultWarrior");
-        this.ranger = new Ranger("defaultRanger");
-
-        this.hammer = new Weapon("hammer", 1, null, 7, WeaponType.HAMMER);
-        this.hammerTooHighLevel = new Weapon("hammer", 6, null, 7, WeaponType.HAMMER);
-
-        this.plateHelmet = new Armor(
-                "plateHelmet", 1, null, 7,
-                new HeroAttribute(2, 1, 1),
-                Slot.HEAD, ArmorType.PLATE);
-        this.plateHelmetTooHighLevel = new Armor(
-                "plateHelmet", 3, null, 7,
-                new HeroAttribute(4, 2, 1),
-                Slot.HEAD, ArmorType.PLATE);
-    }
 
 
     // Construction parameter tests for Equipment of type: Weapon
@@ -123,65 +99,90 @@ public class EquipmentTest {
 
 
 
+    // Equipping Weapon tests
     @Test
-    public void EquipHammerWeapon_Warrior_ShouldSucceed_And_BeAddedToHeroEquipment(){
+    public void EquipWeapon_Warrior_ShouldSucceed_And_BeAddedToHeroEquipment(){
+        Equipment expectedWeapon = new Weapon("weapon", 1, null, 11, WeaponType.SWORD);
+        Hero warrior = new Warrior("warrior");
         try {
-            this.warrior.equipItem(this.hammer);
+            warrior.equipItem(expectedWeapon);
         }catch (Exception e){
             System.out.println(e.getMessage());
         }
-        Assert.assertEquals(this.hammer, this.warrior.getEquipment().get(Slot.WEAPON));
+        Assert.assertEquals(expectedWeapon, warrior.getEquipment().get(Slot.WEAPON));
+    }
+    @Test
+    public void EquipWrongTypeWeapon_Ranger_ShouldThrowException_And_NotBeAddedToHeroEquipment(){
+        Equipment expectedWeapon = new Weapon("weapon", 1, null, 11, WeaponType.SWORD);
+        Hero ranger = new Ranger("ranger");
+        try {
+            ranger.equipItem(expectedWeapon);
+        }catch (Exception e){
+            Assert.assertEquals(InvalidWeaponException.class, e.getClass());
+            System.out.println(e.getMessage());
+        }
+        Assert.assertNull(ranger.getEquipment().get(Slot.WEAPON));
+    }
+    @Test
+    public void EquipTooHighLevelWeapon_Warrior_ShouldThrowException_And_NotBeAddedToHeroEquipment(){
+        Equipment expectedWeapon = new Weapon("weapon", 3, null, 11, WeaponType.SWORD);
+        Hero warrior = new Warrior("warrior");
+        try {
+            warrior.equipItem(expectedWeapon);
+        }catch (Exception e){
+            Assert.assertEquals(InvalidWeaponException.class, e.getClass());
+            System.out.println(e.getMessage());
+        }
+        Assert.assertNull(warrior.getEquipment().get(Slot.WEAPON));
     }
 
-    @Test
-    public void EquipHammerWrongTypeWeapon_Ranger_ShouldThrowException_And_NotBeAddedToHeroEquipment(){
-        try {
-            this.ranger.equipItem(this.hammer);
-        }catch (Exception e){
-            System.out.println(e.getMessage());
-        }
-        Assert.assertNull(this.ranger.getEquipment().get(Slot.WEAPON));
-    }
 
-    @Test
-    public void EquipHammerTooHighLevelWeapon_Warrior_ShouldThrowException_And_NotBeAddedToHeroEquipment(){
-        try {
-            this.warrior.equipItem(this.hammerTooHighLevel);
-        }catch (Exception e){
-            System.out.println(e.getMessage());
-        }
-        Assert.assertNull(this.warrior.getEquipment().get(Slot.WEAPON));
-    }
 
-    @Test
-    public void EquipPlateHelmetArmor_Warrior_ShouldSucceed_And_BeAddedToHeroEquipment_In_CorrectSlot(){
-        try {
-            this.warrior.equipItem(this.plateHelmet);
-        }catch (Exception e){
-            System.out.println(e.getMessage());
-        }
-        Assert.assertEquals(this.plateHelmet, this.warrior.getEquipment().get(Slot.HEAD));
-        Assert.assertNull(this.warrior.getEquipment().get(Slot.BODY));
-    }
 
+    // Equip Armor tests
     @Test
-    public void EquipPlateHelmetWrongTypeArmor_Ranger_ShouldThrowException_And_NotBeAddedToHeroEquipment(){
+    public void EquipArmor_Warrior_ShouldSucceed_And_BeAddedToHeroEquipment_In_CorrectSlot(){
+        Equipment expectedArmor = new Armor(
+                "plateHelmet", 1, null, 7,
+                new HeroAttribute(2, 1, 1),
+                Slot.HEAD, ArmorType.PLATE);
+        Hero warrior = new Warrior("warrior");
         try {
-            this.ranger.equipItem(this.plateHelmet);
+            warrior.equipItem(expectedArmor);
         }catch (Exception e){
             System.out.println(e.getMessage());
         }
-        Assert.assertNull(this.ranger.getEquipment().get(Slot.HEAD));
+        Assert.assertEquals(expectedArmor, warrior.getEquipment().get(Slot.HEAD));
     }
-
     @Test
-    public void EquipPlateHelmetTooHighLevelArmor_Warrior_ShouldThrowException_And_NotBeAddedToHeroEquipment(){
+    public void EquipWrongTypeArmor_Ranger_ShouldThrowException_And_NotBeAddedToHeroEquipment(){
+        Equipment expectedArmor = new Armor(
+                "plateHelmet", 1, null, 7,
+                new HeroAttribute(2, 1, 1),
+                Slot.HEAD, ArmorType.PLATE);
+        Hero ranger = new Ranger("ranger");
         try {
-            this.warrior.equipItem(this.plateHelmetTooHighLevel);
+            ranger.equipItem(expectedArmor);
         }catch (Exception e){
+            Assert.assertEquals(InvalidArmorException.class, e.getClass());
             System.out.println(e.getMessage());
         }
-        Assert.assertNull(this.warrior.getEquipment().get(Slot.HEAD));
+        Assert.assertNull(ranger.getEquipment().get(Slot.HEAD));
+    }
+    @Test
+    public void EquipTooHighLevelArmor_Warrior_ShouldThrowException_And_NotBeAddedToHeroEquipment(){
+        Equipment expectedArmor = new Armor(
+                "plateHelmet", 2, null, 7,
+                new HeroAttribute(2, 1, 1),
+                Slot.HEAD, ArmorType.PLATE);
+        Hero warrior = new Warrior("warrior");
+        try {
+            warrior.equipItem(expectedArmor);
+        }catch (Exception e){
+            Assert.assertEquals(InvalidArmorException.class, e.getClass());
+            System.out.println(e.getMessage());
+        }
+        Assert.assertNull(warrior.getEquipment().get(Slot.HEAD));
     }
 
 }

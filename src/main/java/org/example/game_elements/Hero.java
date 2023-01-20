@@ -7,6 +7,7 @@ import org.example.game_elements_extra.EXPManager;
 import org.example.game_elements_extra.HPManager;
 import org.example.game_elements_extra.IsCombatant;
 import org.example.util.DisplayService;
+import org.example.util.InvalidArmorException;
 import org.example.util.InvalidWeaponException;
 
 import java.util.*;
@@ -121,10 +122,10 @@ public abstract class Hero implements IsCombatant {
 
     private void equipArmor(Armor item) throws Exception {
         if(item.getRequiredLevel() > this.heroLevel){
-            throw new InvalidWeaponException("Hero level too low, failed to equip");
+            throw new InvalidArmorException("Hero level too low, failed to equip");
         }
         if(!Arrays.asList(this.validArmorTypes).contains(item.getArmorType())){
-            throw new InvalidWeaponException("Hero is ineligible to use this type of armor, failed to equip");
+            throw new InvalidArmorException("Hero is ineligible to use this type of armor, failed to equip");
         }
         this.equipment.put(item.getEligibleSlot(), item);
     }
