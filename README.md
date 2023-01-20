@@ -23,14 +23,16 @@ For the requirements relating to the main assignment, I have tried to implement/
 
 
 ### Deliberate Design choices/interpretations of the assignment
-I don't remember the assignment mentioning a specific required implementation of the levelAttribute situation. I chose to have the "Hero" class have an additional attribute not mentioned in the assignment called levelUpAttribute. By doing this, we do not need to concretely implement or polymorph the "levelUp()" function in all child classes of "Hero" based on specific attributes, and instead we just have a general "levelUp()" function in the parent class with each child having a unique levelUpAttribute defining what "levelUp()" should increase the levelAttribute with.
+I don't remember the assignment mentioning a specific required implementation of the levelAttribute situation. I chose to have the "Hero" class have an additional attribute not mentioned in the assignment called levelUpAttribute. By doing this, we do not need to concretely implement or polymorph the "levelUp()" function in all child classes of "Hero" based on specific attributes, and instead we just have a general "levelUp()" function in the parent class with each child having a unique levelUpAttribute defining what "levelUp()" should increase the levelAttribute with. The same logic could be applied to "CalculateDamage" but I feel there is a great possibility that in the future, if one were to expand on the game, different classes would have very different ways of dealing damage that would need concrete(or from interface) implementations.
 
-I created a service called "DisplayService" that generalizes and handles all printing to the console for the application. I felt that it made sense to have such a service when thinking about what a potentially larger system would look like and how this would create more clearity and maintainability of printing to the console when the application grows. Most of it is used in the extra content, but the required method "displayHero" is also found in this service class. 
+I created a service called "DisplayService" that generalizes and handles all printing to the console for the application. I felt that it made sense to have such a service when thinking about what a potentially larger system would look like and how this would create more clearity and maintainability of printing to the console when the application grows. Most of it is used in the extra content, but the required method "displayHero" is also found in this service class. I felt that it made more sense to leave this responsibility to the game logic and not the Hero. An alternative would be to have a very advanced toString() in Hero and just lett DisplayService display the message without a specific implementation in the service.
 
 
 ## Notes on extra application
 
+The extra content does not have related UML-diagrams for class-structure or program-flow but I have tried to explain the additions below
+
 ### Entity additions to the main application
-
-
+I added an Enemy type that has the same type of hierarchic structure as Hero which the hero can engage combat with. A concrete implement
+of the Enemy exists in the form of a Goblin. I also added the interface IsCombatant which I attach to Hero and Enemy. This interface will supply the main actions expected of any entity in the game that can engage in combat. I also added the Chest item which implements the IsLootable interface which is designed to supply any lootable objects in the game world with necessary actions for supplying the hero with loot when interacted with, since there can exists many lootable objects besides chests. In order for combat and leveling to actually make sense in a game world I also added the managers EXPManager and HPManager which manage exp (experience points) and hp(hit/health points) respectively. HP is mainly used in direct combat while EXP is a reward from combat and is a condition for leveling up based on EXP thresholds. I added a WorldGrid class which contains 
 
