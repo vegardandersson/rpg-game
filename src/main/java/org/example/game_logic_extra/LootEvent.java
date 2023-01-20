@@ -40,11 +40,11 @@ public class LootEvent implements GameEvent {
             if(input.equals("y")){
                 try {
                     this.hero.equipItem((Equipment) loot);
+                    DisplayService.displayMessage(DisplayService.COLOR_GREEN + "Equipped new item!" + DisplayService.COLOR_RESET);
+                    DisplayService.displayMessage(DisplayService.displayHero(this.hero));
                 }catch (Exception e){
-                    System.out.println(e.getMessage());
+                    DisplayService.displayError(e.getMessage());
                 }
-                DisplayService.displayMessage(DisplayService.COLOR_GREEN + "Equipped new item!" + DisplayService.COLOR_RESET);
-                DisplayService.displayMessage(DisplayService.displayHero(this.hero));
             }else{
                 DisplayService.displayMessage("You continue exploring the current floor...");
                 return false;

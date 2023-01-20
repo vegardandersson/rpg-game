@@ -25,6 +25,10 @@ public abstract class Enemy implements IsCombatant {
         return hp;
     }
 
+    public float getDamage() {
+        return damage;
+    }
+
     public float calculateDamage() {
         return damage;
     }

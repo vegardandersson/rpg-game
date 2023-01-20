@@ -23,12 +23,19 @@ public class EXPManager {
         this.exp = exp;
     }
 
+    public int[] getLevelThresholds() {
+        return levelThresholds;
+    }
+
     public void increaseExp(EXPManager exp, Hero hero){
         int currentThreshold = getCurrentExpThreshold();
         this.exp += exp.getExp();
         if(getCurrentExpThreshold() > currentThreshold){
             hero.levelUp();
         }
+    }
+    public void increaseExp(EXPManager exp){
+        this.exp += exp.getExp();
     }
 
     private int getCurrentExpThreshold(){
