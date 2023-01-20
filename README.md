@@ -22,7 +22,9 @@ For the requirements relating to the main assignment, I have tried to implement/
 ## Notes on base application
 
 ### Design of system
+The diagram shows the structure of the basic components outlined in the main assignment. Some arrows artefacts of the diagram might be incorrect as my UML skills are quite rusty:
 
+![Alt text](sparse_class_diagram_core_assignment_application.jpg "Class Diagram")
 
 ### Deliberate Design choices/interpretations of the assignment
 I don't remember the assignment mentioning a specific required implementation of the levelAttribute situation. I chose to have the "Hero" class have an additional attribute not mentioned in the assignment called levelUpAttribute. By doing this, we do not need to concretely implement or polymorph the "levelUp()" function in all child classes of "Hero" based on specific attributes, and instead we just have a general "levelUp()" function in the parent class with each child having a unique levelUpAttribute defining what "levelUp()" should increase the levelAttribute with. The same logic could be applied to "CalculateDamage" but I feel there is a great possibility that in the future, if one were to expand on the game, different classes would have very different ways of dealing damage that would need concrete(or from interface) implementations.
