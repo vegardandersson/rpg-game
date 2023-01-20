@@ -18,8 +18,19 @@ the entire run of the pipeline for that specific push. By expanding the "> Build
 For the requirements relating to the main assignment, I have tried to implement/cover everything it asks for. For the extra content I have also tried to incorporate as many of the common, good practices of java programming and design as possible but considering that I understood that the extra content can not really affect your grade, I sacrifised some key elements in order to achieve a better functioning game-loop (the object of my extra content). It is therefore more lacking in terms of test coverage and documentation than the part relating to the main assignment but I hope this is acceptable. 
 
 ## Notes on base application
+
+### Design of system
+
+
 ### Deliberate Design choices/interpretations of the assignment
 I don't remember the assignment mentioning a specific required implementation of the levelAttribute situation. I chose to have the "Hero" class have an additional attribute not mentioned in the assignment called levelUpAttribute. By doing this, we do not need to concretely implement or polymorph the "levelUp()" function in all child classes of "Hero" based on specific attributes, and instead we just have a general "levelUp()" function in the parent class with each child having a unique levelUpAttribute defining what "levelUp()" should increase the levelAttribute with.
 
+I created a service called "DisplayService" that generalizes and handles all printing to the console for the application. I felt that it made sense to have such a service when thinking about what a potentially larger system would look like and how this would create more clearity and maintainability of printing to the console when the application grows. Most of it is used in the extra content, but the required method "displayHero" is also found in this service class. 
+
 
 ## Notes on extra application
+
+### Entity additions to the main application
+
+
+
