@@ -47,3 +47,6 @@ As time was running out, I managed to create a decent amount of elements to prov
 ### Testing
 I wrote some tests for the extra content as well but I did not write any tests that test game logic and interactions between entities or game events as this would almost constitute integration testing and could include actual game testing and I did not have the time for this.
 
+### Playing the game
+If you actually want to play a full game loop, I suggest you pick warrior and pick up the axe found in the chest immediately, this is the only way you can actually progress right now, as you need a weapon to face the Goblins and since the axe is hard coded because I ran out of time, no other classes can pick it up because of missing weapon type requirement.
+
