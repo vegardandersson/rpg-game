@@ -7,11 +7,20 @@ import org.example.util.DisplayService;
 
 import java.util.concurrent.TimeUnit;
 
+/**
+ * The type Combat event.
+ */
 public class CombatEvent implements GameEvent {
 
     private Enemy enemy;
     private Hero hero;
 
+    /**
+     * Instantiates a new Combat event.
+     *
+     * @param enemy the enemy
+     * @param hero  the hero
+     */
     public CombatEvent(Enemy enemy, Hero hero){
         this.enemy = enemy;
         this.hero = hero;

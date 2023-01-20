@@ -9,12 +9,18 @@ import org.example.util.DisplayService;
 
 import java.util.Scanner;
 
+/**
+ * The type Game controller.
+ */
 public class GameController {
 
     private Hero hero;
     private WorldGrid world;
     private int[] heroPosition;
 
+    /**
+     * Start game.
+     */
     public void startGame(){
         this.setHero(HeroCreationController.createHero());
         DisplayService.displayMessage(DisplayService.displayHero(this.hero));
@@ -123,6 +129,11 @@ public class GameController {
         }
     }
 
+    /**
+     * Sets hero.
+     *
+     * @param hero the hero
+     */
     public void setHero(Hero hero) {
         this.hero = hero;
     }

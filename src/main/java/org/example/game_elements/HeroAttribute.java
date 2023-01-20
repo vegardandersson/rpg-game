@@ -2,6 +2,10 @@ package org.example.game_elements;
 
 import java.util.List;
 
+/**
+ * Class that holds values for attributes: Strength, Dexterity and Intelligence
+ * General and can be utilized by any object that makes use of such attributes
+ */
 public class HeroAttribute {
 
     private int strength;
@@ -31,12 +35,25 @@ public class HeroAttribute {
         return intelligence;
     }
 
+    /**
+     * Takes a supplied collection of attribute values (HeroAttribute)
+     * and increases own attribute values based on these
+     * @param attributes HeroAttribute object holding attribute values
+     *                   to increase with
+     */
     public void increaseAttributes(HeroAttribute attributes){
         this.strength += attributes.getStrength();
         this.dexterity += attributes.getDexterity();
         this.intelligence += attributes.getIntelligence();
     }
 
+    /**
+     * Utility method statically available from this class
+     * that is used to add HeroAttributes together by repeatedly
+     * calling the increaseAttributes() method on a result object
+     * @param attributes List of HeroAttributes to be summed
+     * @return A HeroAttribute object that holds the total summed values for each attribute
+     */
     public static HeroAttribute getSumOfAttributes(List<HeroAttribute> attributes){
         HeroAttribute sum = new HeroAttribute();
         for (HeroAttribute attribute : attributes) {

@@ -4,33 +4,70 @@ import org.example.game_elements_extra.types.WorldObjectType;
 
 import java.util.concurrent.ThreadLocalRandom;
 
+/**
+ * The type World grid.
+ */
 public class WorldGrid {
 
     private WorldObjectType[][] worldGrid;
     private final int gridDimension;
     private int floorNumber;
 
+    /**
+     * Instantiates a new World grid.
+     *
+     * @param dimension the dimension
+     */
     public WorldGrid(int dimension){
         this.gridDimension = dimension;
         this.worldGrid = new WorldObjectType[dimension][dimension];
         this.floorNumber = 0;
     }
 
+    /**
+     * Get world grid world object type [ ] [ ].
+     *
+     * @return the world object type [ ] [ ]
+     */
     public WorldObjectType[][] getWorldGrid(){
         return this.worldGrid;
     }
 
+    /**
+     * Gets grid dimension.
+     *
+     * @return the grid dimension
+     */
     public int getGridDimension() {
         return this.gridDimension;
     }
 
+    /**
+     * Get floor number int.
+     *
+     * @return the int
+     */
     public int getFloorNumber(){
         return this.floorNumber;
     }
 
+    /**
+     * Get content of position world object type.
+     *
+     * @param posX the pos x
+     * @param posY the pos y
+     * @return the world object type
+     */
     public WorldObjectType getContentOfPosition(int posX, int posY){
         return this.worldGrid[posX][posY];
     }
+
+    /**
+     * Set individual world grid tile.
+     *
+     * @param type     the type
+     * @param position the position
+     */
     public void setIndividualWorldGridTile(WorldObjectType type, int[] position){
         this.worldGrid[position[0]][position[1]] = type;
     }
@@ -64,6 +101,9 @@ public class WorldGrid {
         }
     }
 
+    /**
+     * Generate new floor.
+     */
     public void generateNewFloor(){
         refreshWorld();
         populateWorld();

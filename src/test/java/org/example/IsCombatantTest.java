@@ -13,7 +13,7 @@ public class IsCombatantTest {
     @Test
     public void CalculatingDamage_Goblin_ShouldBeCorrectBasedOnDamage(){
         float expectedDamage = 5;
-        Enemy goblin = new Goblin();
+        IsCombatant goblin = new Goblin();
         Assert.assertEquals(expectedDamage, goblin.calculateDamage(), 0.0002f);
     }
     @Test

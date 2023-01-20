@@ -8,11 +8,20 @@ import org.example.util.DisplayService;
 
 import java.util.Scanner;
 
+/**
+ * The type Loot event.
+ */
 public class LootEvent implements GameEvent {
 
     private IsLootable lootable;
     private Hero hero;
 
+    /**
+     * Instantiates a new Loot event.
+     *
+     * @param lootable the lootable
+     * @param hero     the hero
+     */
     public LootEvent(IsLootable lootable, Hero hero){
         this.lootable = lootable;
         this.hero = hero;
