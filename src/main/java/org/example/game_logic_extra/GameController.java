@@ -90,7 +90,7 @@ public class GameController {
             DisplayService.displayCommand("W: up, S: down, A: left, D: right (H: Display Hero)");
             String input = scanner.nextLine().toLowerCase();
 
-            if(!input.matches("[wasd]")){
+            if(!input.matches("[wasdh]")){
                 DisplayService.displayError("Invalid input, try again...");
                 continue;
             }

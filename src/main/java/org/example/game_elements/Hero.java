@@ -16,8 +16,12 @@ public abstract class Hero implements IsCombatant {
 
     private final String heroName;
     public int heroLevel;
+
+    // *extra
     private EXPManager exp;                 // Hero's exp (Experience points) managed by EXPManager
+    // *extra
     private HPManager hp;                   // Hero's hp (hit points) managed by HPManager
+
     public HeroAttribute levelAttribute;    // HeroAttribute object which holds total values of attributes gained from leveling
 
     // Instead of having to concretely implement the method
@@ -53,12 +57,12 @@ public abstract class Hero implements IsCombatant {
     public int getHeroLevel() {
         return heroLevel;
     }
-    public EXPManager getExp(){return exp;}
-    public HPManager getHp() { return hp; }
+    public EXPManager getExp(){return exp;} // *extra
+    public HPManager getHp() { return hp; } // *extra
 
     public void setHp(HPManager hp) {
         this.hp = hp;
-    }
+    } // *extra
 
     public HeroAttribute getLevelAttribute() {
         return levelAttribute;
@@ -119,7 +123,7 @@ public abstract class Hero implements IsCombatant {
     public void levelUp(){
         this.levelAttribute.increaseAttributes(this.levelUpAttribute);
         this.heroLevel += 1;
-        this.getHp().increaseMaxHp(20);
+        this.getHp().increaseMaxHp(20); // *extra
         this.getHp().replenishHp(); // we replenish hp to make sure hero is fully healed when leveling up
 
         DisplayService.displayMessage("\nYou increased to level " +
@@ -138,7 +142,7 @@ public abstract class Hero implements IsCombatant {
      */
     public boolean receiveDamage(float damage){
         return this.hp.reduceCurrentHp(damage);
-    }
+    } // *extra
 
     /**
      * General method for equipping equipment

@@ -11,7 +11,7 @@ import org.example.util.DisplayService;
  */
 public class Armor extends Equipment {
 
-    private int defense;
+    private int defense; // *extra
     private final HeroAttribute bonusAttributes;
     private final ArmorType armorType;
 
@@ -35,13 +35,11 @@ public class Armor extends Equipment {
         this.armorType = armorType;
     }
 
-    public int getDefense() {
-        return defense;
-    }
+    public int getDefense() {return defense;}  // *extra
 
     public void setDefense(int defense) {
         this.defense = defense;
-    }
+    }  // *extra
 
     public HeroAttribute getBonusAttributes() {
         return bonusAttributes;

@@ -13,7 +13,7 @@ public abstract class Equipment extends Item {
 
     private final String equipmentName;
     private final int requiredLevel;
-    private final HeroAttribute requiredAttributes;
+    private final HeroAttribute requiredAttributes; // *extra
     private Slot eligibleSlot;
 
     /**
@@ -39,7 +39,7 @@ public abstract class Equipment extends Item {
 
     public HeroAttribute getRequiredAttributes() {
         return requiredAttributes;
-    }
+    } // *extra
 
     public Slot getEligibleSlot() {
         return eligibleSlot;
