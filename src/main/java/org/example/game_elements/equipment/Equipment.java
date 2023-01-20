@@ -1,7 +1,8 @@
-package org.example.game_elements;
+package org.example.game_elements.equipment;
 
+import org.example.game_elements.HeroAttribute;
 import org.example.game_elements.types.Slot;
-import org.example.game_elements_extra.Item;
+import org.example.game_elements_extra.items.Item;
 
 /**
  * Parent class for all types of equipment that

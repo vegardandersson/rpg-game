@@ -1,11 +1,14 @@
-package org.example.game_logic_extra;
+package org.example.game_logic_extra.controllers;
 
-import org.example.game_elements.Hero;
-import org.example.game_elements_extra.Chest;
-import org.example.game_elements_extra.Goblin;
+import org.example.game_elements.hero.Hero;
+import org.example.game_elements_extra.items.Chest;
+import org.example.game_elements_extra.enemy.Goblin;
 import org.example.game_elements_extra.WorldGrid;
 import org.example.game_elements_extra.types.WorldObjectType;
-import org.example.util.DisplayService;
+import org.example.game_logic_extra.events.CombatEvent;
+import org.example.game_logic_extra.events.GameEvent;
+import org.example.game_logic_extra.events.LootEvent;
+import org.example.util.services.DisplayService;
 
 import java.util.Scanner;
 

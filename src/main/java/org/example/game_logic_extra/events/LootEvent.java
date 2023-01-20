@@ -1,10 +1,10 @@
-package org.example.game_logic_extra;
+package org.example.game_logic_extra.events;
 
-import org.example.game_elements.Equipment;
-import org.example.game_elements.Hero;
-import org.example.game_elements_extra.IsLootable;
-import org.example.game_elements_extra.Item;
-import org.example.util.DisplayService;
+import org.example.game_elements.equipment.Equipment;
+import org.example.game_elements.hero.Hero;
+import org.example.game_elements_extra.actions.IsLootable;
+import org.example.game_elements_extra.items.Item;
+import org.example.util.services.DisplayService;
 
 import java.util.Scanner;
 

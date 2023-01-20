@@ -1,6 +1,6 @@
 package org.example;
 
-import org.example.game_elements_extra.HPManager;
+import org.example.game_elements_extra.stat_managers.HPManager;
 import org.junit.Assert;
 import org.junit.Test;
 

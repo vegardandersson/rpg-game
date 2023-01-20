@@ -1,11 +1,11 @@
-package org.example.util;
+package org.example.util.services;
 
-import org.example.game_elements.Armor;
-import org.example.game_elements.Hero;
+import org.example.game_elements.equipment.Armor;
+import org.example.game_elements.hero.Hero;
 import org.example.game_elements.HeroAttribute;
-import org.example.game_elements.Weapon;
+import org.example.game_elements.equipment.Weapon;
 import org.example.game_elements.types.Slot;
-import org.example.game_elements_extra.Item;
+import org.example.game_elements_extra.items.Item;
 import org.example.game_elements_extra.WorldGrid;
 import org.example.game_elements_extra.types.WorldObjectType;
 

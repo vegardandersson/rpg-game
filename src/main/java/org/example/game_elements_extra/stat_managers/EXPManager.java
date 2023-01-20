@@ -1,6 +1,6 @@
-package org.example.game_elements_extra;
+package org.example.game_elements_extra.stat_managers;
 
-import org.example.game_elements.Hero;
+import org.example.game_elements.hero.Hero;
 
 /**
  * The type Exp manager.

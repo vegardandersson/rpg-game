@@ -1,10 +1,13 @@
 package org.example;
 
 import org.example.game_elements.*;
+import org.example.game_elements.equipment.Armor;
+import org.example.game_elements.equipment.Weapon;
+import org.example.game_elements.hero.*;
 import org.example.game_elements.types.ArmorType;
 import org.example.game_elements.types.Slot;
 import org.example.game_elements.types.WeaponType;
-import org.example.util.DisplayService;
+import org.example.util.services.DisplayService;
 import org.junit.Assert;
 import org.junit.Test;
 

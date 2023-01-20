@@ -1,4 +1,6 @@
-package org.example.game_elements_extra;
+package org.example.game_elements_extra.actions;
+
+import org.example.game_elements_extra.items.Item;
 
 /**
  * The interface Is lootable.

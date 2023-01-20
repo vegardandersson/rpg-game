@@ -1,6 +1,6 @@
 package org.example;
 
-import org.example.game_logic_extra.GameController;
+import org.example.game_logic_extra.controllers.GameController;
 
 public class Main {
     public static void main(String[] args) {

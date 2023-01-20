@@ -1,9 +1,9 @@
-package org.example.game_logic_extra;
+package org.example.game_logic_extra.events;
 
-import org.example.game_elements.Hero;
-import org.example.game_elements_extra.Enemy;
-import org.example.game_elements_extra.IsCombatant;
-import org.example.util.DisplayService;
+import org.example.game_elements.hero.Hero;
+import org.example.game_elements_extra.enemy.Enemy;
+import org.example.game_elements_extra.actions.IsCombatant;
+import org.example.util.services.DisplayService;
 
 import java.util.concurrent.TimeUnit;
 

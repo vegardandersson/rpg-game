@@ -1,11 +1,10 @@
 package org.example;
 
-import org.example.game_elements.Equipment;
-import org.example.game_elements.Weapon;
+import org.example.game_elements.equipment.Equipment;
+import org.example.game_elements.equipment.Weapon;
 import org.example.game_elements.types.WeaponType;
-import org.example.game_elements_extra.Chest;
-import org.example.game_elements_extra.IsLootable;
-import org.example.game_elements_extra.Item;
+import org.example.game_elements_extra.items.Chest;
+import org.example.game_elements_extra.actions.IsLootable;
 import org.junit.Assert;
 import org.junit.Test;
 

@@ -1,4 +1,4 @@
-package org.example.util;
+package org.example.util.custom_exceptions;
 
 /**
  * Custom exception thrown when a hero does not

@@ -1,13 +1,18 @@
 package org.example;
 
 import org.example.game_elements.*;
+import org.example.game_elements.equipment.Armor;
+import org.example.game_elements.equipment.Equipment;
+import org.example.game_elements.equipment.Weapon;
+import org.example.game_elements.hero.Hero;
+import org.example.game_elements.hero.Ranger;
+import org.example.game_elements.hero.Warrior;
 import org.example.game_elements.types.ArmorType;
 import org.example.game_elements.types.Slot;
 import org.example.game_elements.types.WeaponType;
-import org.example.util.InvalidArmorException;
-import org.example.util.InvalidWeaponException;
+import org.example.util.custom_exceptions.InvalidArmorException;
+import org.example.util.custom_exceptions.InvalidWeaponException;
 import org.junit.Assert;
-import org.junit.Before;
 import org.junit.Test;
 
 public class EquipmentTest {

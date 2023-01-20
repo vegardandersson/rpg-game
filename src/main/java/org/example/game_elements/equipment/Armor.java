@@ -1,8 +1,9 @@
-package org.example.game_elements;
+package org.example.game_elements.equipment;
 
+import org.example.game_elements.HeroAttribute;
 import org.example.game_elements.types.ArmorType;
 import org.example.game_elements.types.Slot;
-import org.example.util.DisplayService;
+import org.example.util.services.DisplayService;
 
 /**
  * Class for equipment of type Armor

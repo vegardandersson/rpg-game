@@ -1,8 +1,8 @@
 package org.example;
 
-import org.example.game_elements_extra.Enemy;
-import org.example.game_elements_extra.Goblin;
-import org.example.game_elements_extra.IsCombatant;
+import org.example.game_elements_extra.enemy.Enemy;
+import org.example.game_elements_extra.enemy.Goblin;
+import org.example.game_elements_extra.actions.IsCombatant;
 import org.junit.Assert;
 import org.junit.Test;
 

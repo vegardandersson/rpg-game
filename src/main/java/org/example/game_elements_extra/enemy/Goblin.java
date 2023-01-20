@@ -1,4 +1,4 @@
-package org.example.game_elements_extra;
+package org.example.game_elements_extra.enemy;
 
 /**
  * The type Goblin.

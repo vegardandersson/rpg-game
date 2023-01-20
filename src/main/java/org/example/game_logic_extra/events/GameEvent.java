@@ -1,4 +1,4 @@
-package org.example.game_logic_extra;
+package org.example.game_logic_extra.events;
 
 /**
  * The interface Game event.

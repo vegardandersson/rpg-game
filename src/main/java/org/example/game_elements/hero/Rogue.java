@@ -1,9 +1,11 @@
-package org.example.game_elements;
+package org.example.game_elements.hero;
 
+import org.example.game_elements.HeroAttribute;
+import org.example.game_elements.equipment.Weapon;
 import org.example.game_elements.types.ArmorType;
 import org.example.game_elements.types.Slot;
 import org.example.game_elements.types.WeaponType;
-import org.example.game_elements_extra.HPManager;
+import org.example.game_elements_extra.stat_managers.HPManager;
 
 /**
  * Concrete implementation of Hero class named Rogue

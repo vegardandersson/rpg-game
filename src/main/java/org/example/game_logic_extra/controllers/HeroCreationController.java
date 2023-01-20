@@ -1,7 +1,7 @@
-package org.example.game_logic_extra;
+package org.example.game_logic_extra.controllers;
 
-import org.example.game_elements.*;
-import org.example.util.DisplayService;
+import org.example.game_elements.hero.*;
+import org.example.util.services.DisplayService;
 
 import java.util.Scanner;
 

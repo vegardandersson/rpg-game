@@ -1,8 +1,8 @@
 package org.example;
 
-import org.example.game_elements.Hero;
-import org.example.game_elements.Warrior;
-import org.example.game_elements_extra.EXPManager;
+import org.example.game_elements.hero.Hero;
+import org.example.game_elements.hero.Warrior;
+import org.example.game_elements_extra.stat_managers.EXPManager;
 import org.junit.Assert;
 import org.junit.Test;
 

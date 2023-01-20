@@ -1,4 +1,8 @@
-package org.example.game_elements_extra;
+package org.example.game_elements_extra.enemy;
+
+import org.example.game_elements_extra.stat_managers.EXPManager;
+import org.example.game_elements_extra.stat_managers.HPManager;
+import org.example.game_elements_extra.actions.IsCombatant;
 
 /**
  * The type Enemy.

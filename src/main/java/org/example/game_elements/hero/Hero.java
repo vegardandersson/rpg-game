@@ -1,14 +1,18 @@
-package org.example.game_elements;
+package org.example.game_elements.hero;
 
+import org.example.game_elements.HeroAttribute;
+import org.example.game_elements.equipment.Armor;
+import org.example.game_elements.equipment.Equipment;
+import org.example.game_elements.equipment.Weapon;
 import org.example.game_elements.types.ArmorType;
 import org.example.game_elements.types.Slot;
 import org.example.game_elements.types.WeaponType;
-import org.example.game_elements_extra.EXPManager;
-import org.example.game_elements_extra.HPManager;
-import org.example.game_elements_extra.IsCombatant;
-import org.example.util.DisplayService;
-import org.example.util.InvalidArmorException;
-import org.example.util.InvalidWeaponException;
+import org.example.game_elements_extra.stat_managers.EXPManager;
+import org.example.game_elements_extra.stat_managers.HPManager;
+import org.example.game_elements_extra.actions.IsCombatant;
+import org.example.util.services.DisplayService;
+import org.example.util.custom_exceptions.InvalidArmorException;
+import org.example.util.custom_exceptions.InvalidWeaponException;
 
 import java.util.*;
 

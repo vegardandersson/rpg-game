@@ -4,12 +4,40 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="db7ad628-a34e-4f92-8b5b-ca25a9dc3202" name="Changes" comment="added more proper documentation">
+    <list default="true" id="db7ad628-a34e-4f92-8b5b-ca25a9dc3202" name="Changes" comment="final changes, added some extra comments">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/game_elements/Armor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/game_elements/Armor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/game_elements/Equipment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/game_elements/Equipment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/game_elements/Hero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/game_elements/Hero.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/game_logic_extra/GameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/game_logic_extra/GameController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/game_elements/Armor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/game_elements/equipment/Armor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/game_elements/Equipment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/game_elements/equipment/Equipment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/game_elements/Hero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/game_elements/hero/Hero.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/game_elements/Ranger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/game_elements/hero/Ranger.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/game_elements/Rogue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/game_elements/hero/Rogue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/game_elements/Warrior.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/game_elements/hero/Warrior.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/game_elements/Weapon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/game_elements/equipment/Weapon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/game_elements/Wizard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/game_elements/hero/Wizard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/game_elements_extra/Chest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/game_elements_extra/items/Chest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/game_elements_extra/EXPManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/game_elements_extra/stat_managers/EXPManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/game_elements_extra/Enemy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/game_elements_extra/enemy/Enemy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/game_elements_extra/Goblin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/game_elements_extra/enemy/Goblin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/game_elements_extra/HPManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/game_elements_extra/stat_managers/HPManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/game_elements_extra/IsCombatant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/game_elements_extra/actions/IsCombatant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/game_elements_extra/IsLootable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/game_elements_extra/actions/IsLootable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/game_elements_extra/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/game_elements_extra/items/Item.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/game_logic_extra/CombatEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/game_logic_extra/events/CombatEvent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/game_logic_extra/GameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/game_logic_extra/controllers/GameController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/game_logic_extra/GameEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/game_logic_extra/events/GameEvent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/game_logic_extra/HeroCreationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/game_logic_extra/controllers/HeroCreationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/game_logic_extra/LootEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/game_logic_extra/events/LootEvent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/util/DisplayService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/util/services/DisplayService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/util/InvalidArmorException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/util/custom_exceptions/InvalidArmorException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/util/InvalidWeaponException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/util/custom_exceptions/InvalidWeaponException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/EXPManagerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/EXPManagerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/EnemyTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/EnemyTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/EquipmentTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/EquipmentTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/HPManagerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/HPManagerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/HeroTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/HeroTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/IsCombatantTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/IsCombatantTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/IsLootableTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/IsLootableTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,22 +71,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/VAnde1/JavaProjects/noroff-work",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/VAnde1/JavaProjects/noroff-work&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
-  <component name="RunManager" selected="Application.Main">
+}</component>
+  <component name="RunManager" selected="JUnit.org.example in rpg-game">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.Main" />
       <module name="rpg-game" />
@@ -133,8 +161,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.org.example in rpg-game" />
+        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.IsCombatantTest" />
         <item itemvalue="JUnit.IsLootableTest" />
         <item itemvalue="JUnit.HPManagerTest" />
@@ -162,7 +190,8 @@
       <workItem from="1674123328321" duration="618000" />
       <workItem from="1674124206747" duration="13689000" />
       <workItem from="1674198334969" duration="1980000" />
-      <workItem from="1674200450850" duration="21624000" />
+      <workItem from="1674200450850" duration="21743000" />
+      <workItem from="1674228927019" duration="399000" />
     </task>
     <task id="LOCAL−00001" summary="initialization of project rpg-game">
       <created>1673618568597</created>
@@ -320,11 +349,28 @@
       <option name="presentableId" value="LOCAL−00026" />
       <updated>1674219248248</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL−00027" summary="final changes, added some extra comments">
+      <created>1674227792849</created>
+      <option name="number" value="LOCAL−00027" />
+      <option name="presentableId" value="LOCAL−00027" />
+      <updated>1674227792849</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="initialization of project rpg-game" />
@@ -348,6 +394,7 @@
     <MESSAGE value="finished editing parts of Equipment test to be in line with assignment requriements" />
     <MESSAGE value="added tests for core classes and interfaces of extra content" />
     <MESSAGE value="added more proper documentation" />
-    <option name="LAST_COMMIT_MESSAGE" value="added more proper documentation" />
+    <MESSAGE value="final changes, added some extra comments" />
+    <option name="LAST_COMMIT_MESSAGE" value="final changes, added some extra comments" />
   </component>
 </project>
